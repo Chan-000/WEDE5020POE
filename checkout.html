@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en"> <!--Sets the language to english-->
+    <head>
+       <!--this tag allows a wide range of characters-->
+       <meta charset="UTF-8">
+       <!--this tag controls the visible area of the webpage on mobile phones-->
+       <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+       <title>Whiskers and Wag Tails - Home</title> <!--Sets the page title-->
+    </head>
+    <body>
+      <!--Header with a logo and navigation to other pages-->
+      <header>
+        <span class="logo">
+          <img src ="images/logo.png" alt="Whiskers and Wag Tails Logo" width ="150">
+          <img src="images/cart_icon.svg" alt="checkout icon" width="50">
+        </span>
+        <nav>
+          <a href="index.html">Home</a>  <!--link to the homepage-->
+          <a href="about.html">About Us</a>   <!--link to the about us page-->
+          <a href="products.html">Products</a>  <!--link to the products page-->
+          <a href="contact.html">Contacts</a>  <!--link to the contact page-->
+          <a href="checkout.html">Checkout</a>    <!--link to the checkout page-->
+        </nav> 
+      </header>
+      <!--Main content of the page-->
+      <main>
+        <h1>Checkout</h1>  <!--Main heading for the checkout page-->
+        <section id="checkout-form">  <!--Section for checkout form-->
+          <h3>Enter your details</h3>   <!--subheading for the form-->
+          <fieldset> <!--Groups related form elements-->
+            <legend>Order information</legend>  <!--label for the fieldset-->
+            <form> <!--Container for the form elements-->
+              <label for="name">Full Name:</label><br> 
+              <input type="text" id="name" name="name" placeholder="Enter your full name"><br><br>
+              <label for="phone">Phone Number:</label><br>
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number(+27...)"></iput><br><br>
+              <label for="address">Address:</label><br>
+              <input type="text" id="address" name="address" placeholder="Enter your delivery address"><br><br>
+              <label for="city">City:</label><br>  <!--label for address input-->
+              <input type="text" id="city" name="city" placeholder="Enter your city"><br><br>
+              <label for="Delivery">Delivery Option:</label><br>
+              <select id="delivery" name="delivery">  <!--Dropdown menue for delivery options-->
+                <option value="standard">Standard (5-10 days)</option>
+                <option value="express">Express (1-3 days)</option>
+              </select> <br><br>
+              <label for="notes">Order Notes:</label><br>
+              <textarea id="notes" name="notes" placeholder="e.g Leave at the door" rows="2"></textarea><br><br>
+              <label for="payment">Payment Method:</label><br>
+              <select id="payment" name="payemnt">  <!--Dropdown for payment options-->
+                <option value="credit">Credit Card</option>
+                <option value="eft">EFT</option>
+                <option value="cash">Cash on Delivery</option>
+              </select><br><br> <!--payment options-->
+              <label><input type="checkbox" name="terms"> I agree to the terms and conditions</label><br><br> <!--Terms agreement checkbox-->
+              <input type="submit" value="Place Order">  <!--Submit button-->
+            </form>
+          </fieldset>
+          </section>
+          <section id="order-summary">  <!--Section for the order summary-->
+            <h3>Order Summary</h3>
+            <p><b>Items:</b></p>
+            <ul>
+              <li>Crunchy Peanut & Pumpkin Bones - 160g (R55)</li>
+              <li>Low Fat Chicken Biscuits - 200g (R80) </li>
+              <li>Salmon Cat Treats - 100g (R40)</li>
+            </ul>
+            <p><b>Total:</b>R175</p> <!--Placeholder total-->
+            <!--Placeholder for dynamic cart (to be added later)-->
+          </section>
+      </main>
+      <footer>  <!--Contains the footer information-->
+        <p>&copy; 2025 Whiskers and Wag Tails. All right reserved</p>
+      </footer>
+    </body>
+</html>    

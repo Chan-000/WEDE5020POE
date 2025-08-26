@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang = "en"> <!--Sets the language to english-->
+    <head>
+      <!--this tag allows a wide range of characters-->
+      <meta charset="UTF-8">
+      <!--this tag controls the visible area of the webpage on mobile phones-->
+      <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+      <title>Whiskers and Wag Tails - Contact</title> <!--Sets the page title-->
+    </head>
+    <body>
+      <!--Header with a logo and navigation to other pages-->
+        <header>
+          <span class="logo">
+            <img src ="images/logo.png" alt="Whiskers and Wag Tails Logo" width ="150">
+          </span>
+          <nav>
+            <a href="index.html">Home</a>  <!--link to the homepage-->
+            <a href="about.html">About Us</a>   <!--link to the about us page-->
+            <a href="products.html">Products</a>  <!--link to the products page-->
+            <a href="contact.html">Contacts</a>  <!--link to the contact page-->
+            <a href="checkout.html">Checkout</a>    <!--link to the checkout page-->
+          </nav> 
+        </header>
+        <!--Main content for all pages-->
+        <main>
+          <h1>Contact Us</h1> <!--Main heading for the content page-->
+          <section id="contact-form"> <!--Section for the contact form-->
+            <h2>Get in Touch</h2> 
+            <h4>Questions, Comments, concerns you tell us we are ready to listen.</h4>
+            <fieldset> <!--Groups related form elements-->
+            <legend>Contact Information</legend> <!--Label for the fieldset-->
+              <form> <!--Container for the form elements-->
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name"><br><br> <!--Text input for name-->
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>  <!--Email input-->
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" placeholder="Enter your message" rows="4"></textarea><br><br> <!--Text area for message-->
+                <input type="submit" value="Send Message"> <!--Submit button-->
+              </form>
+            </fieldset>
+          </section>
+          <section id="contact-details"> <!--Section for contact information-->
+            <h2>Contact Details</h2>
+            <p><b>Email:</b>info@whiskersandwagtails.co.za</p>
+            <p><b>Phone:</b>+27 21 123 4567</p>
+          </section>
+          <section id="locations">  <!--Section for multiple store locations-->
+            <h2>Our locations</h2>
+            <p><b>Main Store:</b>123 Main Road, Green Point, Cape Town,8001</p>  <!--Primary store location-->
+            <p><b>Pickup Point:</b>456 Bird Street, Stellenbosch, 7600</p>  <!--Secondary pickup location-->  
+            <img src="images/location.png" alt="Map shpwing Main Road, Green Point and Bird Street, Stellenbosch" width="auto"> <!--Placeholder for a screenshot-->
+            <p>Source:Google maps (2025)</p>
+            <p><a href="https://www.google.com/maps/dir/?api=1&origin=123+Main+Road,+Green+Point,+Cape+Town,+8001&destination=456+Bird+Street,+Stellenbosch,+7600" target="_blank">Get Directions</a></p> <!--Link to Google Maps for directions-->
+            <!-- Placeholder for map integration(to be added later)-->
+          </section>
+          <!--Contains the footer information-->
+          <footer>
+            <p>&copy:2025 Whiskers and Wag Tails.All right reserved</p>
+          </footer>
+        </main>  
+    </body>
+</html>    
