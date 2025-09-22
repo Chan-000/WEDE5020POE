@@ -51,6 +51,8 @@ August 11, 2025: Added paragraphs about our history, vision and mission on about
 august 20, 2025: Added picture of profucts, as well as their names, prices and ingriedients on Products products.html. And a form and map on contact page as well as a filling form and a list of products in a cart on checkout page.
 August 26, 2025: Created a site map and a file/folder structure
 August 27, 2025: Pushed the code into Github
+September 22, 2025: Addressed Part 1 feedback on design mismatch aesthetic mismatch by planning to implement CSS in Part 2 with the colours mentioned in my proposal under Design and User experience and using Roboto font which align with the vision for Whiskers and Wag Tails.
+September 22, 2025: Update intent to refine wireframes to match the styled layout, improving from part 1 feedback.
 
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
@@ -69,3 +71,7 @@ cat-food2 2:Pixabay. (2017) Cat food pet dry food bowl. [Photograph]. Available 
 Google Maps. 2025. Map screenshot of Cape Town and Stellenbosch locations [screenshot taken by author, 24 August 2025]. Available at: https://www.google.com/maps
 American Kennel Club. 2024. Homemade Dog Treat Recipes. [online] Available at: https://www.akc.org/expert-advice/lifestyle/homemade-dog-treat-recipes/
 [Accessed 27 August 2025].
+
+
+## Part 2: CSS Styling and Responsive Design
+This section will document progress for Part 2
