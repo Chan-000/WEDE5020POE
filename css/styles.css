@@ -1,5 +1,19 @@
 /* Whiskers and Wag Tails - part 2 CSS Stylesheet*/
+
+/* CSS reset*/
+*{
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*default styles*/
 body {
-  background-color: rgb(rgb(214, 15, 15), rgb(21, 189, 21), rgb(21, 21, 165));
-  font-family:  Roboto ;
+  font-family: 'Roboto', sans-serif;  /*font matches the proposal*/
+  font-size: 16px; 
+  line-height: 1.5;
+  color: #4CAF50;  
+  background-color: #F5F5DC;  
+  
+
 }

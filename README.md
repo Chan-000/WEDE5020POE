@@ -54,6 +54,7 @@ August 27, 2025: Pushed the code into Github
 September 22, 2025: Addressed Part 1 feedback on design mismatch aesthetic mismatch by planning to implement CSS in Part 2 with the colours mentioned in my proposal under Design and User experience and using Roboto font which align with the vision for Whiskers and Wag Tails.
 September 22, 2025: Update intent to refine wireframes to match the styled layout, improving from part 1 feedback.
 September 22, 2025: Created an external stylesheet 'css/styles.css' and linked it to all five HTML pages to enable part 2 styling.This also addresses part 1 feedback on desing asthetic mismatch by preparing colurs and roboto font implementation.
+September 22, 2025 (evening): Implented default styles in styles.css with Roboto font and nature inspired colour scheme( #F5F5DC background, #4CAF50 colour)
 
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
