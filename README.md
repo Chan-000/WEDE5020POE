@@ -58,6 +58,7 @@ September 22, 2025 (evening): Implented default styles in styles.css with Roboto
 September 23, 2025: Applied typography styles with Roboto font and green heading( #4CAF50) and constintent spacing enhancing readibility.it 
 September 23, 2025: Implemented layout structure using flexbox for navigation, inspired by Montego, main content and footer for all 5 pages.
 September 23, 2025: Styled the header with a fixed position and aligned the logo, search box, pages at the center.
+September 23,2025: Fixed logo alignment to be flush with the left margin, extended search box width, and moved navigation links to the left section for better layout balance.
 
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
