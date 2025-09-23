@@ -46,16 +46,15 @@ a {
 
 /*Layout structure*/
 header{
-  height: 130px;
   background-color: #FFFFFF;
-  padding: 1rem;
+  padding: 0.5rem 0;
   border-bottom: 2px solid #4CAF50 ; /* the three elements inside stands for width, style, color*/
-  position: fixed;/*stays in the same position*/
+  position: sticky;/*stays in the same position*/
   top: 0;
   left: 0;
   right: 0px;
   z-index: 1000; /*ensure it stays above other content*/
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /*Subtle shadow*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /*Subtle shadow*/
 }
 
 .header-container {
@@ -65,58 +64,74 @@ header{
   flex-direction: row;
   justify-content: space-between; /*space between logo, search and nav*/
   align-items: center; /* vertically center items*/
-  padding: 0;
+  
 }
 
-.logo {
+.left-section {
+  margin-right: 10px;
+  flex-direction: start;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.logo img {
   vertical-align: middle;
-}
-
-.left-section{
-  display: flex;
-  align-items: center;
+  max-width: 150px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 /* syling the search button */
 .middle-section{
-  flex: 1;
-  margin-left: 70px;
-  margin-right: 35px;
-  max-width: 500px;
+  display: flex;
+  margin: 0 1rem;
+  max-width: 700px;
+  align-items: center;
+
+}
+
+.search-container {
   display: flex;
   align-items: center;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  overflow: hidden; /*keeps everything inside*/
+  height: 36px;
 }
 
 .search-bar{
   flex: 1;
   height: 36px;
-  padding-left: 10px;
-  font-size: 16px;
-  border-radius: 2px;
-  border: 1px solid #4CAF50;
-  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
-  width: 0;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0;
+  box-shadow: none;
+  width: 410px;
+  border: none;
+  outline: none;
 }
 
 .search-bar::placeholder{
   font-family: Roboto,sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
-.search-button{
+.search-button,
+.voice-search-button{
   height: 36px;
-  width: 50px;
-  background-color: #FFF8EB;
-  border: 1px solid #4CAF50;
-  margin-left: -1px;
-  margin-right: 10px;
-}
-
-.search-button, .voice-search-button {
-  position: relative;
+  width: 36px;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  background-color: #F5F5DC;
+}
+
+
+.search-button img, .voice-search-button img {
+  max-height: 20px;
 }
 
 .search-button .tooltip, .voice-search-button .tooltip {
@@ -139,20 +154,9 @@ header{
    opacity: 1;
 }
 
-.search-icon{
-  height: 28px;
-}
-
-.voice-search-button{
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-  border: none;
-  background-color: #FFF8EB;
-}
-
+.search-icon,
 .voice-search-icon{
-  height: 26px;
+  height: 20px;
 }
 
  nav ul {
@@ -162,13 +166,13 @@ header{
  }
 
  nav ul li { /* this a descendant sectore because <li> that's inside a <ul> which is inside a <nav>*/
-  margin: 0 1rem;
+  margin: 0 0.2rem;
  }
 
  main{
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 140px 1rem 1rem;
  }
 
  footer{
