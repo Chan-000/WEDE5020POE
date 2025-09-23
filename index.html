@@ -11,10 +11,24 @@
     </head>
     <body>
         <!--Header with a logo and navigation to other pages-->
-        <header class="header">
-            <span class="logo">
-                <img src ="images/logo.png" alt="Whiskers and Wag Tails Logo" width ="150">
-            </span>
+        <header>
+            <div class="header-container">
+                <div class="left-section">
+                    <div class="logo">
+                        <img src ="images/logo.png" alt="Whiskers and Wag Tails Logo" width ="150">
+                    </div>
+                </div>
+                <div class="middle-section">
+                    <input class="search-bar" type="textbox" placeholder="Search pet food...">
+                    <button class="search-button" >
+                        <img class="search-icon" src="images/search.svg">
+                        <div class="tooltip">Search</div>
+                    </button>
+                    <button class="voice-search-button">
+                        <img class="voice-search-icon" src="images/voice-search-icon.svg">
+                        <div class="tooltip">Search with your voice</div>
+                    </button>
+                </div>
             <nav>
                 <ul>
                    <li><a href="index.html">Home</a></li>   <!--link to the homepage-->
@@ -24,6 +38,7 @@
                    <li><a href="checkout.html">Checkout</a></li>    <!--link to the checkout page-->
                 </ul>
             </nav> 
+            </div>
         </header>
         
         <!--Main content-->

@@ -46,17 +46,122 @@ a {
 
 /*Layout structure*/
 header{
+  height: 130px;
   background-color: #FFFFFF;
   padding: 1rem;
   border-bottom: 2px solid #4CAF50 ; /* the three elements inside stands for width, style, color*/
+  position: fixed;/*stays in the same position*/
+  top: 0;
+  left: 0;
+  right: 0px;
+  z-index: 1000; /*ensure it stays above other content*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /*Subtle shadow*/
 }
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;  /* use flebox for alignment*/
+  flex-direction: row;
+  justify-content: space-between; /*space between logo, search and nav*/
+  align-items: center; /* vertically center items*/
+  padding: 0;
+}
+
+.logo {
+  vertical-align: middle;
+}
+
+.left-section{
+  display: flex;
+  align-items: center;
+}
+
+/* syling the search button */
+.middle-section{
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar{
+  flex: 1;
+  height: 36px;
+  padding-left: 10px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: 1px solid #4CAF50;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  width: 0;
+}
+
+.search-bar::placeholder{
+  font-family: Roboto,sans-serif;
+  font-size: 14px;
+}
+
+.search-button{
+  height: 36px;
+  width: 50px;
+  background-color: #FFF8EB;
+  border: 1px solid #4CAF50;
+  margin-left: -1px;
+  margin-right: 10px;
+}
+
+.search-button, .voice-search-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-button .tooltip, .voice-search-button .tooltip {
+  font-family: Roboto,sans-serif;
+  position: absolute;
+  background-color: #9E9E9E;
+  color: #FFFFFF;
+  padding: 4px 6px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip{
+   opacity: 1;
+}
+
+.search-icon{
+  height: 28px;
+}
+
+.voice-search-button{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: #FFF8EB;
+}
+
+.voice-search-icon{
+  height: 26px;
+}
+
  nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
  }
 
- nav ul li {
+ nav ul li { /* this a descendant sectore because <li> that's inside a <ul> which is inside a <nav>*/
   margin: 0 1rem;
  }
 
@@ -72,4 +177,20 @@ header{
   background-color: #4CAF50;
   color: #FFFFFF;
  }
+
+/*Decoration and colour*/
+.hero{
+   border: 1px solid #4CAF50 ; /* width, style and color*/
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*horizontal position, vertical position, blur and color*/
+  }
+
+  nav ul li a { /*descendant selector*/
+   padding: 0.5rem 1rem;
+   font-weight: 500;
+   border-radius: 5px;
+  }
+
+  footer {
+    border-top: 2px solid #FFFFFF;
+  }
 
