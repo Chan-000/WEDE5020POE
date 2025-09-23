@@ -39,11 +39,6 @@ p{
   margin-bottom: 1rem;
 }
 
-a {
-  color: #4CAF50;
-  text-decoration: none;
-}
-
 /*Layout structure*/
 header{
   background-color: #FFFFFF;
@@ -64,7 +59,7 @@ header{
   flex-direction: row;
   justify-content: space-between; /*space between logo, search and nav*/
   align-items: center; /* vertically center items*/
-  
+  margin-left: 1rem;
 }
 
 .left-section {
@@ -93,7 +88,7 @@ header{
 .search-container {
   display: flex;
   align-items: center;
-  border: 2px solid #4CAF50;
+  border: 2.1px solid #4CAF50;
   border-radius: 5px;
   background-color: #FFFFFF;
   overflow: hidden; /*keeps everything inside*/
@@ -159,9 +154,10 @@ header{
   height: 20px;
 }
 
+/* Navigation and Contact Button Styles*/
  nav ul {
   display: flex;
-  justify-content: center;
+  align-items: centre ;
   list-style: none;
  }
 
@@ -189,10 +185,39 @@ header{
   }
 
   nav ul li a { /*descendant selector*/
+   text-decoration: none;
+   color: #4CAF50;
    padding: 0.5rem 1rem;
    font-weight: 500;
    border-radius: 5px;
+   display: inline-flex;
+   align-items: centre;
+   justify-content: centre;
+   cursor: pointer;
   }
+
+  nav ul li a:hover { 
+    color: #8D6E63; /* the color brown when a curose hover on the links*/
+  }
+
+ .contact-button{
+  background-color: #D32F2F;
+  color:#FFFFFF;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width:auto
+ }
+
+ .contact-button:hover {
+  color: #FFFFFF;
+  background-color: #B71C1C;
+  transition: background-color 0.3s;
+ }
 
   footer {
     border-top: 2px solid #FFFFFF;
