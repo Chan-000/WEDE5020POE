@@ -57,6 +57,7 @@ September 22, 2025: Created an external stylesheet 'css/styles.css' and linked i
 September 22, 2025 (evening): Implented default styles in styles.css with Roboto font and nature inspired colour scheme( #F5F5DC background, #4CAF50 colour)
 September 23, 2025: Applied typography styles with Roboto font and green heading( #4CAF50) and constintent spacing enhancing readibility.it 
 
+
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
  -Pet care tips inspired by general veterinary guidelines
