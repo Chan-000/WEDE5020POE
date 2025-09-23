@@ -43,3 +43,33 @@ a {
   color: #4CAF50;
   text-decoration: none;
 }
+
+/*Layout structure*/
+header{
+  background-color: #FFFFFF;
+  padding: 1rem;
+  border-bottom: 2px solid #4CAF50 ; /* the three elements inside stands for width, style, color*/
+}
+ nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+ }
+
+ nav ul li {
+  margin: 0 1rem;
+ }
+
+ main{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+ }
+
+ footer{
+  text-align: center;
+  padding: 1rem;
+  background-color: #4CAF50;
+  color: #FFFFFF;
+ }
+
