@@ -45,23 +45,23 @@ This submission consists of five HTML page with semantic structure, a sitemap, a
 <img width="787" height="357" alt="Screenshot 2025-08-26 171324" src="https://github.com/user-attachments/assets/fbc2997c-a428-4c1f-b7e2-64a3ce356899" />
 
 ## Changelog
-August 3rd, 2025: initial et up of the project, created the WhiskerandWagTails folder with index,about,products,contact and checkout page with basic HTML structure
-Agust 10, 2025: Updated index.html with an introductory paragraph and images
-August 11, 2025: Added paragraphs about our history, vision and mission on about page.
+- August 3rd, 2025: initial et up of the project, created the WhiskerandWagTails folder with index,about,products,contact and checkout page with basic HTML structure
+- Agust 10, 2025: Updated index.html with an introductory paragraph and images
+- August 11, 2025: Added paragraphs about our history, vision and mission on about page.
 august 20, 2025: Added picture of profucts, as well as their names, prices and ingriedients on Products products.html. And a form and map on contact page as well as a filling form and a list of products in a cart on checkout page.
-August 26, 2025: Created a site map and a file/folder structure
+- August 26, 2025: Created a site map and a file/folder structure
 August 27, 2025: Pushed the code into Github
-September 22, 2025: Addressed Part 1 feedback on design mismatch aesthetic mismatch by planning to implement CSS in Part 2 with the colours mentioned in my proposal under Design and User experience and using Roboto font which align with the vision for Whiskers and Wag Tails.
-September 22, 2025: Update intent to refine wireframes to match the styled layout, improving from part 1 feedback.
-September 22, 2025: Created an external stylesheet 'css/styles.css' and linked it to all five HTML pages to enable part 2 styling.This also addresses part 1 feedback on desing asthetic mismatch by preparing colurs and roboto font implementation.
-September 22, 2025 (evening): Implented default styles in styles.css with Roboto font and nature inspired colour scheme( #F5F5DC background, #4CAF50 colour)
-September 23, 2025: Applied typography styles with Roboto font and green heading( #4CAF50) and constintent spacing enhancing readibility.it 
-September 23, 2025: Implemented layout structure using flexbox for navigation, inspired by Montego, main content and footer for all 5 pages.
-September 23, 2025: Styled the header with a fixed position and aligned the logo, search box, pages at the center.
-September 23,2025: Fixed logo alignment to be flush with the left margin, extended search box width, and moved navigation links to the left section for better layout balance.
-September 23, 2025: Refined header with layout integrated search box  containing search and voice icons, improving alignment and addressing the feedback.
-September 24, 2025: Styled hero section with a large text box, followed by a full width image and reduced gap from header.
-
+- September 22, 2025: Addressed Part 1 feedback on design mismatch aesthetic mismatch by planning to implement CSS in Part 2 with the colours mentioned in my proposal under Design and User experience and using Roboto font which align with the vision for Whiskers and Wag Tails.
+- September 22, 2025: Update intent to refine wireframes to match the styled layout, improving from part 1 feedback.
+- September 22, 2025: Created an external stylesheet 'css/styles.css' and linked it to all five HTML pages to enable part 2 styling.This also addresses part 1 feedback on desing asthetic mismatch by preparing colurs and roboto font implementation.
+- September 22, 2025 (evening): Implented default styles in styles.css with Roboto font and nature inspired colour scheme( #F5F5DC background, #4CAF50 colour)
+- September 23, 2025: Applied typography styles with Roboto font and green heading( #4CAF50) and constintent spacing enhancing readibility.it 
+- September 23, 2025: Implemented layout structure using flexbox for navigation, inspired by Montego, main content and footer for all 5 pages.
+- September 23, 2025: Styled the header with a fixed position and aligned the logo, search box, pages at the center.
+- September 23,2025: Fixed logo alignment to be flush with the left margin, extended search box width, and moved navigation links to the left section for better layout balance.
+- September 23, 2025: Refined header with layout integrated search box  containing search and voice icons, improving alignment and addressing the feedback.
+- September 24, 2025: Styled hero section with a large text box, followed by a full width image and reduced gap from header.
+- September 24, 2025 (Evening): Styled featured products section with two items sharing equal space, mimicking a three-item layout(barktreats website).
 
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
