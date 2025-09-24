@@ -34,14 +34,14 @@ h3 {
 
 p{
   font-size: 1rem; /*paragraph text*/
-  line-height: 1.8;
+  line-height: 1.6;
   letter-spacing: 0.07em;
   margin-bottom: 1rem;
 }
 
 /*Layout structure*/
 header{
-  background-color: #FFFFFF;
+  background-color: #000000;
   padding: 0.5rem 0;
   border-bottom: 2px solid #4CAF50 ; /* the three elements inside stands for width, style, color*/
   position: sticky;/*stays in the same position*/
@@ -59,7 +59,7 @@ header{
   flex-direction: row;
   justify-content: space-between; /*space between logo, search and nav*/
   align-items: center; /* vertically center items*/
-  margin-left: 1rem;
+
 }
 
 .left-section {
@@ -157,7 +157,7 @@ header{
 /* Navigation and Contact Button Styles*/
  nav ul {
   display: flex;
-  align-items: centre ;
+  align-items: center ;
   list-style: none;
  }
 
@@ -176,6 +176,7 @@ header{
   padding: 1rem;
   background-color: #4CAF50;
   color: #FFFFFF;
+  border-top: 2px solid #FFFFFF;
  }
 
 /*Decoration and colour*/
@@ -185,25 +186,30 @@ header{
    padding-top: 60px;
  }
 
+.hero-image {
+  display: block;
+  max-width: 100%;
+  max-height: 10%;
+  object-fit: cover;
+  padding-bottom: 60px;
+  background-color: red;
+  
+}
+
 .hero-text {
+  background-color: pink;
   text-align: center;
   padding: 3rem 2rem;
   margin-bottom: 1rem;
-  min-height: 600px;
+  min-height: 500px;
   margin-top: -12rem;
-}
-
-.hero-image {
-  width: 100%;
-  height: auto;/*maintains aspect ration*/
-  display: block;/*removes inline spaces*/
-  object-fit: cover; /*ensures the image covers the space*/
-  max-height: 500px;
+  margin-bottom: -3.9rem;
 }
 
 .hero-actions{
   text-align: center;
-  padding: 2rem 0;
+  padding-top: -1rem;
+  background-color: purple;
 }
 
 .cta-button{
@@ -230,7 +236,7 @@ header{
 
 .learn-more {
   display: inline-block;
-  margin-left: 1rem;
+  margin-right: 2rem;
   text-decoration: underline;
 } 
 
@@ -239,16 +245,16 @@ header{
   transition: color 0.3s;
 }
   
-.nav ul li a { /*descendant selector*/
-   text-decoration: none;
-   color: #4CAF50;
-   padding: 0.5rem 1rem;
-   font-weight: 500;
-   border-radius: 5px;
-   display: inline-flex;
-   align-items: centre;
-   justify-content: centre;
-   cursor: pointer;
+nav ul li a { /*descendant selector*/
+  text-decoration: none;
+  color: #4CAF50 ;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   }
 
   nav ul li a:hover { 
@@ -274,7 +280,48 @@ header{
   transition: background-color 0.3s;
  }
 
-  footer {
-    border-top: 2px solid #FFFFFF;
-  }
+ /*Featured products styles*/
+ #featured-products {
+  padding: 2rem 1rem;
+  margin-bottom: 1rem;
+ }
+
+ #featured-products h3 {
+   font-size: 2rem;
+   text-align: center;
+   margin-bottom: 1rem;
+ }
+
+ .products-container{
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+ }
+
+ .product-item {
+  flex: 1 ; /*equal width for each item*/
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 0rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  max-width: 50%; /*ensures the two items fit evenly*/
+ }
+
+ .product-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+ }
+
+ .product-item p{
+  font-size: 1.1rem;
+  color: #9E9E9E;
+  margin: 0;
+ }
+  
 
