@@ -59,6 +59,9 @@ September 23, 2025: Applied typography styles with Roboto font and green heading
 September 23, 2025: Implemented layout structure using flexbox for navigation, inspired by Montego, main content and footer for all 5 pages.
 September 23, 2025: Styled the header with a fixed position and aligned the logo, search box, pages at the center.
 September 23,2025: Fixed logo alignment to be flush with the left margin, extended search box width, and moved navigation links to the left section for better layout balance.
+September 23, 2025: Refined header with layout integrated search box  containing search and voice icons, improving alignment and addressing the feedback.
+September 24, 2025: Styled hero section with a large text box, followed by a full width image and reduced gap from header.
+
 
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
