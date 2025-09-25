@@ -46,84 +46,119 @@
       
       <!--Main content of the page-->
       <main>
-        <h2>Whiskers and Wag Tails</h2> <!--Main heading for the products page-->
-        <h1>Produts</h1>
-        <p>Discover our range of natural, locally sourced pet food and treats produced to keep you furry babbies healthy and happy!</p>
-        <section id="dog-products">
-          <h2>Dog Food</h2>  <!--Section for the dog product listings-->
-          <table> <!--table for dog listings-->
-            <tr>
-              <td>
-                <img src="images/dog_food.jpg" alt="Dog food" width="200">
-                <h4>Turkey thigh and Oats</h4>
-                <p>Ingredients: Whole oats,egg,turkey thigh,flaxseed</p>
-                <p>Price: R60/250g</p>
-                <a href="checkout.html"><button>Add to Cart</button></a>
-              </td>
-              <td>
-                <img src="images/dog_food2.jpg" alt="Dog food" width="230">
-                <h4>Chicken and carrot crunch bites</h4>
-                <p>Ingredients: Chicken meal, carrot powder, parsely</p>
-                <p>Price: R70/200g</p>
-                <a href="checkout.html"><button>Add to Cart</button></a>
-              </td>
-              <td>
-                <img src="images/dog_snacks.jpg" alt="Dog food in a bowl" width="200" height="140">
-                <h4>Low fat chicken biscuit</h4>
-                <p>Ingredients: Chicken, sweet potayo,coconut oil, rosemary</p>
-                <p>Price: R80/200g</p>
-                <a href="checkout.html"><button>Add to Cart</button></a>
-              </td>
-              <td>
-                <img src="images/dog_snacks2.jpg" alt="crunchy peanut pumpkin dog treats" width="250" height="140">
-                <h4>Crunchy Peanut & Pumpkin Bones</h4>
-                <p>Ingredients: Oat flour, natural peanut butter, pumpkin puree,egg</p>
-                <p>Price: R55/160g</p>
-                <a href="checkout.html"><button>Add to Cart</button></a>
-              </td>
-            </tr>
-          </table>
-          <h2>Cat Food</h2> <!--Subheading for cat products-->
-          <table> 
-          <tr>
-              <td>
-                <img src="images/cat_food.jpg" alt="Cat food" width="200" height="230">
-                <h4>Wholesome Beef & Veggie kibble Mix</h4>
-                <p>Ingredients: Beef, peas, brown rice, sweet potato, vitamins A,D,E</p>
-                <p>Price: R150/500g</p>
-                <a href="checkout.html"><button>Add to Cart</button></a>
-              </td>
-              <td>
-                <img src="images/cat_food2.jpg" alt="Bowl of salmon and tuna cat kibble" width="260">
-                <h4>Wholesome Beef & Veggie kibble Mix</h4>
-                <p>Ingredients: Salmon, tuna, peas, lentils, vitamins and minerals</p>
-                <p>Price: R100/250g</p>
-                <a href="checkout.html"><button>Add to Cart</button></a>
-              </td>
-              <td>
-                <img src="images/cat_snacks.jpg" alt="Cat snacks" width="145">
-                <h4> Salmon cat treats</h4>
-                <p>Ingredients: Salmon, brown rice, flaxseed, parsely</p>
-                <p>Price: R40/100g</p>
-                <a href="checkout.html"><button>Add to Cart</button></a>
-              </td>
-              <td>
-                <img src="images/cat_snacks2.png" alt="Chicken and salmon cat snacks" width="245">
-                <h4> Deluxe chicken & salmon Snack Sticks</h4>
-                <p>Ingredients: Chicken, salmon, chicken liver, krill oil, vitamins, taurine</p>
-                <p>Price: R50/40g</p>
-                <a href="checkout.html"><button>Add to Cart</button></a>
-              </td>
-            </tr>
-          </table>
-          <p><a href="checkout.html"><button>Add to Cart</button></a>to purchase your favourites</p> <!--Call to action-->
+        <section class="product-hero">
+          <div class="product-intro">
+            <h1>At Whiskers and Wag Tails Products</h1> <!--Main heading for the products p-->
+            <p>Discover our range of natural, locally sourced pet food and treats produced to keep you furry babbies healthy and happy!</p>
+          </div>
         </section>
- 
+        <section id="product-grid">
+          <div class="product-card">
+            <img src="images/dog_food.jpg" alt="Dog food">
+            <div class="product-details">
+              <div class="product-name">Turkey thigh and Oats</div>
+              <div class="product-recipe">
+                <p>Ingredients: Whole oats,egg,turkey thigh,flaxseed</p>
+              </div>
+              <div class="product-price">Price: R60/250g</div>
+              <a href="checkout.html"><button class="add-to-cart">Add to Cart</button></a>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/dog_food2.jpg" alt="Dog food">
+            <div class="product-details">
+              <div class="product-name">Chicken and carrot crunch bites</div>
+              <div class="product-recipe">
+                <p>Ingredients: Chicken meal, carrot powder, parsely</p>
+              </div>
+              <div class="product-price">Price: R70/200g</div>
+              <a href="checkout.html"><button class="add-to-cart">Add to Cart</button></a>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/dog_snacks.jpg" alt="Dog food in a bowl">
+            <div class="product-details">
+              <div class="product-name">Low fat chicken biscuit</div>
+              <div class="product-recipe">
+                <p>Ingredients: Chicken, sweet potato,coconut oil, rosemary</p>
+              </div>
+              <div class="product-price">Price: R80/200g</div>
+              <a href="checkout.html"><button class="add-to-cart">Add to Cart</button></a>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/dog_snacks2.jpg" alt="crunchy peanut pumpkin dog treats">
+            <div class="product-details">
+              <div class="product-name">Crunchy Peanut & Pumpkin Bones</div>
+              <div class="product-recipe">
+                <p>Ingredients: Oat flour, natural peanut butter, pumpkin puree,egg</p>
+              </div>
+              <div class="product-price">Price: R55/160g</div>
+              <a href="checkout.html"><button class="add-to-cart">Add to Cart</button></a>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/cat_food.jpg" alt="Cat food">
+            <div class="product-details">
+              <div class="product-name">Wholesome Beef & Veggie kibble</div>
+              <div class="product-recipe">
+                <p>Ingredients: Beef, peas, brown rice, sweet potato, vitamins A,D,E</p>
+              </div>
+              <div class="product-price">Price: R150/500g</div>
+              <a href="checkout.html"><button class="add-to-cart">Add to Cart</button></a>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/cat_food2.jpg" alt="Bowl of salmon and tuna cat kibble">
+            <div class="product-details">
+              <div class="product-name">Salmon & Tuna Ocean kibble</div>
+              <div class="product-recipe">
+                <p>Ingredients: Salmon, tuna, peas, lentils, vitamins and minerals</p>
+              </div>
+              <div class="product-price">Price: R100/250g</div>
+              <a href="checkout.html"><button class="add-to-cart">Add to Cart</button></a>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/cat_snacks.jpg" alt="Cat snacks">
+            <div class="product-details">
+              <div class="product-name">Salmon cat treats</div>
+              <div class="product-recipe">
+                <p>Ingredients: Salmon, brown rice, flaxseed, parsely</p>
+              </div>
+              <div class="product-price">Price: R40/100g</div>
+              <a href="checkout.html"><button class="add-to-cart">Add to Cart</button></a>
+            </div>
+          </div>    
+          <div class="product-card">
+            <img src="images/cat_snacks2.png" alt="Chicken and salmon cat snacks">
+            <div class="product-details">
+              <div class="product-name">Deluxe chicken & salmon Snack Sticks</div>
+              <div class="product-recipe">
+                <p>Ingredients: Chicken, salmon, chicken liver, krill oil, vitamins, taurine</p>
+              </div>
+              <div class="product-price">Price: R50/40g</div>
+              <a href="checkout.html"><button class="add-to-cart">Add to Cart</button></a>
+            </div>
+          </div> 
+          <div class="product-card">
+            <img src="images/food.jpg" alt="pet food">
+            <div class="product-details">
+              <div class="product-name">Lamb & Brown Rice Delight</div>
+              <div class="product-recipe">
+                <p>Fresh lamp, brown rice, peas, carrots, flaxseed, rosemary extract, vitamins (A, B12, D3, E).</p>
+              </div>
+              <div class="product-price">Price: R120/400g</div>
+              <a href="checkout.html"><button class="add-to-cart">Add to Cart</button></a>
+            </div>
+          </div>         
+        </section>
       </main>
     <!--Footer-->
     <footer>
       <p>Thank you for visiting our website!!!</p>
       <p>&copy; 2025 Whiskers and Wag Tails.All right reserved</p>
     </footer>
+    <script></script>
     </body>
 </html>    
