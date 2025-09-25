@@ -63,6 +63,7 @@ August 27, 2025: Pushed the code into Github
 - September 24, 2025: Styled hero section with a large text box, followed by a full width image and reduced gap from header.
 - September 24, 2025 (Evening): Styled featured products section with two items sharing equal space, mimicking a three-item layout(barktreats website).
 - September 24, 2025 (Night): Added styled pet tip and testimonials sections with a cohesive green-themed design.
+- September 25, 2025: Styled the about page.
 
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
