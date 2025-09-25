@@ -8,30 +8,25 @@
 }
 
 /*default styles*/
-body {
+html,body {
+  width: 100%;
   font-family: 'Roboto', sans-serif;  /*font matches the proposal*/
   font-size: 16px; 
   line-height: 1.5;
   color: #4CAF50;  
   background-color: #F5F5DC;  
+   /* prevents horizontal scrolling*/
 }
 
 /*Typograph styles*/
-h1 {
-  font-size: 6rem; /*larger heading*/
+h1, h3, h4 {
   font-weight: 700;
-  color: #4CAF50;
+  color:#4CAF50;
   margin-bottom: 1rem;
 }
-
-h3 {
-  font-size: 2rem; /*larger subheading*/
-  font-weight: 500;
-  color: #4CAF50;
-  margin-bottom: 0.5;
-
-}
-
+ 
+h1 {font-size: 6rem;}
+h3, h4 {font-size: 2rem; font-weight: 500;}
 p{
   font-size: 1rem; /*paragraph text*/
   line-height: 1.6;
@@ -41,7 +36,8 @@ p{
 
 /*Layout structure*/
 header{
-  background-color: #000000;
+
+  background-color: #FFFFFF;
   padding: 0.5rem 0;
   border-bottom: 2px solid #4CAF50 ; /* the three elements inside stands for width, style, color*/
   position: sticky;/*stays in the same position*/
@@ -59,24 +55,15 @@ header{
   flex-direction: row;
   justify-content: space-between; /*space between logo, search and nav*/
   align-items: center; /* vertically center items*/
-
 }
 
-.left-section {
-  margin-right: 10px;
-  flex-direction: start;
-  margin-left: 0;
-  padding-left: 0;
-}
-
+.left-section {margin-right: 10px;}
 .logo img {
   vertical-align: middle;
   max-width: 150px;
-  margin-left: 0;
-  padding-left: 0;
 }
 
-/* syling the search button */
+/* styling the search button */
 .middle-section{
   display: flex;
   margin: 0 1rem;
@@ -107,13 +94,9 @@ header{
   outline: none;
 }
 
-.search-bar::placeholder{
-  font-family: Roboto,sans-serif;
-  font-size: 1rem;
-}
+.search-bar::placeholder{font-family: Roboto,sans-serif; font-size: 1rem; }
 
-.search-button,
-.voice-search-button{
+.search-button,.voice-search-button{
   height: 36px;
   width: 36px;
   border: none;
@@ -124,9 +107,7 @@ header{
   background-color: #F5F5DC;
 }
 
-.search-button img, .voice-search-button img {
-  max-height: 20px;
-}
+.search-button img, .voice-search-button img { max-height: 20px; }
 
 .search-button .tooltip, 
 .voice-search-button .tooltip{
@@ -144,15 +125,7 @@ header{
   white-space: nowrap;
 }
 
-.search-button:hover .tooltip,
-.voice-search-button:hover .tooltip{
-   opacity: 1;
-}
-
-.search-icon,
-.voice-search-icon{
-  height: 20px;
-}
+.search-button:hover .tooltip,.voice-search-button:hover .tooltip{ opacity: 1; }
 
 /* Navigation and Contact Button Styles*/
  nav ul {
@@ -161,14 +134,11 @@ header{
   list-style: none;
  }
 
- nav ul li { /* this a descendant sectore because <li> that's inside a <ul> which is inside a <nav>*/
-  margin: 0 0.2rem;
- }
+ nav ul li { margin: 0 0.2rem; }/* this a descendant sectore because <li> that's inside a <ul> which is inside a <nav>*/
 
  main{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 140px 1rem 1rem;
+  width: 100%;
+  padding: 60px 1rem 1rem;
  }
 
  footer{
@@ -177,14 +147,19 @@ header{
   background-color: #4CAF50;
   color: #FFFFFF;
   border-top: 2px solid #FFFFFF;
+  width: 100%;
  }
 
 /*Decoration and colour*/
-.hero{
-   width: 100%;
-   margin-top: 0;
-   padding-top: 60px;
- }
+.hero{ width: 100%; padding-top: 60px; }
+
+.hero-text {
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-bottom: 1rem;
+  min-height: 300px; 
+  margin-top: -10rem;
+}
 
 .hero-image {
   display: block;
@@ -192,30 +167,14 @@ header{
   max-height: 10%;
   object-fit: cover;
   padding-bottom: 60px;
-  background-color: red;
   
 }
 
-.hero-text {
-  background-color: pink;
-  text-align: center;
-  padding: 3rem 2rem;
-  margin-bottom: 1rem;
-  min-height: 500px;
-  margin-top: -12rem;
-  margin-bottom: -3.9rem;
-}
-
-.hero-actions{
-  text-align: center;
-  padding-top: -1rem;
-  background-color: purple;
-}
+.hero-actions{text-align: center;padding-top: -1rem;}
 
 .cta-button{
   background-color: #000000;
   color: #FFFFFF;
-  font-weight: 2rem;
   padding: 0.5rem 1.2rem;
   border: 3px solid #000000 ;
   border-radius: 20px;
@@ -230,9 +189,7 @@ header{
   box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.15);
 }
 
-.cta-button:active{
-  opacity: 0.9;
-}
+.cta-button:active{opacity: 0.9;}
 
 .learn-more {
   display: inline-block;
@@ -240,10 +197,7 @@ header{
   text-decoration: underline;
 } 
 
-.learn-more:hover {
-  color: #8D6E63;
-  transition: color 0.3s;
-}
+.learn-more:hover {color: #8D6E63;transition: color 0.3s;}
   
 nav ul li a { /*descendant selector*/
   text-decoration: none;
@@ -257,10 +211,8 @@ nav ul li a { /*descendant selector*/
   cursor: pointer;
   }
 
-  nav ul li a:hover { 
-    color: #8D6E63; /* the color brown when a curose hover on the links*/
-  }
-
+  nav ul li a:hover { color: #8D6E63;} /* the color brown when a curose hover on the links*/
+  
  .contact-button{
   background-color: #D32F2F;
   color:#FFFFFF;
@@ -281,23 +233,15 @@ nav ul li a { /*descendant selector*/
  }
 
  /*Featured products styles*/
- #featured-products {
-  padding: 2rem 1rem;
-  margin-bottom: 1rem;
- }
+ #featured-products {padding: 2rem 1rem;margin-bottom: 1rem; }
 
- #featured-products h3 {
-   font-size: 2rem;
-   text-align: center;
-   margin-bottom: 1rem;
- }
+ #featured-products h3 {text-align: center;margin-bottom: 1rem; }
 
  .products-container{
   display: flex;
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
-  max-width: 1200px;
   margin: 0 auto;
  }
 
@@ -318,24 +262,13 @@ nav ul li a { /*descendant selector*/
   margin-bottom: 0.5rem;
  }
 
- .product-item p{
-  font-size: 1.1rem;
-  color: #9E9E9E;
-  margin: 0;
- }
+ .product-item p{font-size: 1.1rem; color: #9E9E9E; }
 
  /*pet tip and testimonials styles*/
  #pet-tip, #testimonials {
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   background-color: #FFFFFF;
   margin-bottom: 1rem;
- }
-  
- #pet-tip h4, #testimonials h4 {
-  font-size: 2rem;
-  text-align: center;
-  color: #4CAF50;
-  margin-bottom: 1.5rem;
  }
 
 .tip-box {
@@ -349,19 +282,12 @@ nav ul li a { /*descendant selector*/
   text-align: center;
 }
 
-.tip-box p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #9E9E9E;
-}
+.tip-box p {font-size: 1.1rem;line-height: 1.6;color: #9E9E9E;}
 
-.tip-icon {
-  max-width: 50px;
-  margin-bottom: 1rem;
-}
+.tip-icon {max-width: 50px;margin-bottom: 1rem;}
 
 .testimonial-box {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 1.5rem;
   background-color: #E8F5E9;
@@ -388,9 +314,78 @@ nav ul li a { /*descendant selector*/
   color: #4CAF50;
 }
 
-.author {
-  font-size: 1rem;
-  color: #666666;
-  font-style: italic;
-  margin-top: 0.5rem;
+.author {font-size: 1rem;color: #666666;font-style: italic;margin-top: 0.5rem;}
+
+/*About page styles*/
+.dog-cat-image {
+  width: 100%;
+  max-height: 1400px;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
+
+.story-section {position: relative; padding: 2rem 0;}
+
+.story-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #E8F5E9;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.content-item{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background-color: #E8F5E9;
+  border: 3px solid #4CAF50;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.content-item.reverse {flex-direction: row-reverse;}
+
+.section-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  padding: 1rem;
+}
+ 
+.dogs-owner-image {
+  max-width: 100%;
+  height: auto;
+  width: 600px;
+  max-height: 500px;
+  object-fit: cover;
+  padding: 1rem;
+}
+
+.cat-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  width: 500px;
+  object-fit: cover;
+  padding: 1rem;
+}
+
+.section-text {
+  padding: 1rem; 
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
