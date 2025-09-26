@@ -89,4 +89,5 @@ American Kennel Club. 2024. Homemade Dog Treat Recipes. [online] Available at: h
 
 
 ## Part 2: CSS Styling and Responsive Design
-This section will document progress for Part 2
+<img width="834" height="538" alt="image" src="https://github.com/user-attachments/assets/387813f3-e9b8-498a-8bc5-deec2306c629" /> at desktop layout is three 
+
