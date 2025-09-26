@@ -388,6 +388,22 @@ nav ul li a { /*descendant selector*/
   justify-content: center;
 }
 
+.section-text .fas {margin-right: 0.5rem;}
+
+/*responsive designs*/
+@media (max-width:768px) {
+  .content-item{grid-template-columns: 1fr 1fr;}
+  .dog-cat-image{max-height: 400px;}
+  h1 {font-size: 2.5rem;}
+}
+
+@media (max-width: 480px) {
+  .content-item {padding: 1rem;}
+  .dog-cat-image, .section-image, .dogs-owner-image, .cat-image {max-height: 250px;}
+  h1 {font-size: 2rem;}
+}
+
+
 /*products page styles*/
 .product-hero{
   position: relative;
@@ -474,12 +490,30 @@ nav ul li a { /*descendant selector*/
   margin-right: 0;
   transition: 0.15s;
 }
+
+.add-to-cart .fas {
+  margin-right: 0.5rem;
+}
 .add-to-cart:hover{
   background-color: rgb(250, 189, 34);
   color: black;
 }
 .add-to-cart:active{
   opacity: 0,5;
+}
+
+/*responsive design */
+@media (max-width: 768px) {
+  #product-grid{grid-template-columns: repeat(2, 1fr);}
+  .product-intro h1 {font-size: 2.5rem;}
+  .product-intro p {font-size: 1,1rem;}
+}
+
+@media (max-width: 480px) {
+  #product-grid {grid-template-columns: 1fr;}
+  .product-intro h1 {font-size: 2rem;}
+  .product-intro p {font-size: 1rem;}
+  .product-card img {height: 50%;}
 }
 
 /*checkout page styles*/

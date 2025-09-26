@@ -6,6 +6,7 @@
     <title>Whiskers and Wag Tails-About Us</title> <!--Sets the page tittle-->
     <link rel="stylesheet" href="css/styles.css"> <!--Link the html page to the style.css file-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body>
     <!--Header with a logo and navigation to other pages-->
@@ -13,7 +14,12 @@
             <div class="header-container">
                 <div class="left-section">
                     <div class="logo">
-                        <img src ="images/logo.png" alt="Whiskers and Wag Tails Logo" width ="150">
+                        <!-- Use picture element to serve different logo images based on screen size for responsiveness -->
+                        <picture>
+                          <source media="(max-width: 767px)" srcset="images/logo-mobile.png" >
+                          <source media="(min-width:768px)" srcset="images/logo.png">
+                          <img src ="images/logo.png" alt="Whiskers and Wag Tails Logo" width ="150">
+                        </picture>
                     </div>
                 </div>
                 <div class="middle-section">
@@ -45,7 +51,11 @@
     <main>
       <h1>ABOUT US</h1> <!--main heading for the company history-->
       <section class="story-section">   <!--Section for the company history-->
-        <img src="images/dog_and_cat.jpg" alt="A dog and a cat together" class="dog-cat-image">
+        <picture>
+          <source media="(max-width: 767px)" srcset="images/dog_and_cat-mobile.jpg">
+          <source media="(min-width: 768px)" srcset="images/dog_and_cat.jpg">
+          <img src="images/dog_and_cat.jpg" alt="A dog and a cat together" class="dog-cat-image">
+        </picture>
         <div id="story-content"> <!--Section for the compant mission-->
           <h2><i>Our Story</i></h2>
           <p>Founded in 2024 in Cape Town,South Africa, Whiskers and Wag Tails began with our founders passion for preparing healthy, homemade meals for her pets.This approach proved to be more affordable and nutritious than store-bought options.We have continued upgrading our formulation as well as business to keep our passion alive.</p>
@@ -53,9 +63,13 @@
       </section>
       <section id="mission" class="content-section">
         <div class="content-item">
-          <img src="images/dog.jpg" alt="A eating Dog picture" class="section-image">
+          <picture>
+            <source media="(max-width: 767px)" srcset="images/dog-mobile.jpg">
+            <source media="(min-width: 768px)" srcset="images/dog.jpg">
+            <img src="images/dog.jpg" alt="A eating Dog picture" class="section-image">
+          </picture>
           <div class="section-text">
-            <h2><i>Our mission</i></h2>
+            <h2><i class="fas fa-heart">Our mission</i></h2>
             <p>To provide healthy, affordable pet food using natural ingredients and to help lengthen the relationship between people and their pets.</p>
           </div>
         </div>
@@ -63,17 +77,27 @@
       <section id="vision" class="content-section"> <!--Section for the company vision-->
         <div class="content-item">
           <div class="section-text">
-            <h2><i>Our vision</i></h2> 
+            <h2><i class="fas fa-eye">Our vision</i></h2> 
             <p>To be the top pet food brand in South Africa, trusted by pet owners nationwide.</p>
           </div>
-          <img src="images/cat.jpg" alt="An eating cat picture" class="cat-image">
+          <!-- Use picture element to serve different images based on screen size for responsiveness -->
+          <picture>
+            <source media="(max-width: 767px)" srcset="images/cat-mobile.jpg">
+            <source media="(min-width: 768px)" srcset="images/cat.jpg">
+            <img src="images/cat.jpg" alt="An eating cat picture" class="cat-image">
+          </picture> 
         </div>
       </section>
       <section id="team" class="content-section"> <!--Section for team information-->
         <div class="content-item">
-          <img src="images/dog_with_owner.jpg" alt="Founder with dogs" class="dogs-owner-image">
+          <!-- Use picture element to serve different images based on screen size for responsiveness -->
+          <picture>
+            <source media="(max-width: 767px)" srcset="images/dog_with_owner-mobile.jpg">
+            <source media="(min-width: 768px)" srcset="images/dog_with_owner.jpg">
+            <img src="images/dog_with_owner.jpg" alt="Founder with dogs" class="dogs-owner-image">
+          </picture>
           <div class="section-text">
-            <h2><i>Our Team</i></h2>
+            <h2><i class="fas fa-users">Our Team</i></h2>
             <p>Meet our founder, Jenny Brown who started this company with love for pets. More team members to be added soon. </p>
           </div>
         </div>
