@@ -498,9 +498,13 @@ nav ul li a { /*descendant selector*/
   border-radius: 15px;
   color: #9E9E9E;
   font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 
 .progress-step.active{background-color: #4CAF50; color:#FFFFFF;}
+
+.progress-step .fas{margin-right: 0.5rem;}
 
 .checkout-container {
   display: flex;
@@ -513,6 +517,8 @@ nav ul li a { /*descendant selector*/
 .checkout-form-card, .order-summary-card {
   flex: 1;
   background: linear-gradient(135deg, #E8F5E9, #FFFFFF);
+  background-size: 200% 200%;
+  animation: 15px; /* apply the gradientshift animation for 5seconds easing in and out*/
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -558,7 +564,7 @@ nav ul li a { /*descendant selector*/
   padding: 0.75rem 2rem;
   border: none;
   border-radius: 10px;
-  font-weight: 600px;
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
   width: 100%;
@@ -612,21 +618,106 @@ nav ul li a { /*descendant selector*/
   .product-intro p {font-size: 1rem;}
 }
 
+@media (max-width: 480px) {
+  h1 {font-size: 1.5rem;}
+  .form-group input, .form-group select, .form-group textarea {font-size: 0.875rem;}
+}
 
 
+/*contact page styles*/
+.contact-details-container {
+  display: flex;
+  justify-content: space-between;
+  max-height: 1200px;
+  margin: 0 auto 2rem;
+  gap: 2rem;
+  border: none;
+}
 
+.contact-image img {
+  width: 100%;
+  height: auto;
+  max-height: 26.25rem;
+  object-fit: cover;
+}
 
+.contact-info {flex: 1; padding: 1rem;}
 
+.contact-info h2 {
+  color: #4CAF50;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
 
+.contact-info p {
+  font-size:1.1rem ;
+  color: #9E9E9E;
+  margin-bottom: 0.5rem;
+}
 
+.contact-info a {
+  color: #4CAF50;
+  text-decoration: none;
+}
 
+.contact-info:hover {text-decoration: underline;}
 
+.contact-form-section{
+  max-width: 50rem;
+  margin: 0 auto 2rem;
+  background: linear-gradient(135deg, #E8F5E9, #FFFFFF);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.location-section{
+  text-align: end;
+  margin-bottom: 2rem;
+}
 
+.location-section img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
 
+.location-section p {
+  font-size: 0.9rem;
+  color: #9E9E9E;
+  margin-bottom: 0.5rem;
+}
 
+.directions-link {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: 500;
+}
 
+.directions-link:hover {text-decoration: underline;}
 
+/*defines an animation called gradientshift to create a moving background effect*/
+@keyframes gradient-Shift {
+  0% {background-position: 0% 0%;}
+  50% {background-position: 100% 100%;}
+  100% {background-position: 0% 0%;}
+}
+
+/* responsive design*/
+@media (max-width: 768px) {
+  .contact-details-container{flex-direction: column;}
+  .contact-image img {max-height: 12.5rem;}
+  h1 {font-size: 2rem;}
+  h4 {font-size: 1.2rem;}
+  .form-card .fas {font-size: 1.5rem;}
+  .contact-form-section{max-width: 100%;}
+}
+
+@media (max-width: 480px) {
+  h1 {font-size: 1.5rem;}
+  h4{font-size: 1rem;}
+  .form-group input, .form-group textarea {font-size: 0.875rem;}
+}
 
 
 
