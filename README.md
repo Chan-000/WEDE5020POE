@@ -66,6 +66,8 @@ August 27, 2025: Pushed the code into Github
 - September 25, 2025: Styled the about page.
 - September 25, 2025: Styled the products page with grid.
 -  September 25, 2025 (Afternoon): Created checkout.html with two-column layout (form and summary), card styles, responsive design, and custom touches.
+- September 26, 2025 (Afternoon): Enhanced checkout.html with Font Awesome icons, gradient animation, and responsive logo using picture element.
+- September 26, 2025 (Afternoon): Enhanced about.html with Font Awesome icons, gradient animation, and responsive images using picture element.
 
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
