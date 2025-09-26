@@ -51,6 +51,8 @@ This submission consists of five HTML page with semantic structure, a sitemap, a
 august 20, 2025: Added picture of profucts, as well as their names, prices and ingriedients on Products products.html. And a form and map on contact page as well as a filling form and a list of products in a cart on checkout page.
 - August 26, 2025: Created a site map and a file/folder structure
 August 27, 2025: Pushed the code into Github
+
+-part2
 - September 22, 2025: Addressed Part 1 feedback on design mismatch aesthetic mismatch by planning to implement CSS in Part 2 with the colours mentioned in my proposal under Design and User experience and using Roboto font which align with the vision for Whiskers and Wag Tails.
 - September 22, 2025: Update intent to refine wireframes to match the styled layout, improving from part 1 feedback.
 - September 22, 2025: Created an external stylesheet 'css/styles.css' and linked it to all five HTML pages to enable part 2 styling.This also addresses part 1 feedback on desing asthetic mismatch by preparing colurs and roboto font implementation.
@@ -86,8 +88,20 @@ cat-food2 2:Pixabay. (2017) Cat food pet dry food bowl. [Photograph]. Available 
 Google Maps. 2025. Map screenshot of Cape Town and Stellenbosch locations [screenshot taken by author, 24 August 2025]. Available at: https://www.google.com/maps
 American Kennel Club. 2024. Homemade Dog Treat Recipes. [online] Available at: https://www.akc.org/expert-advice/lifestyle/homemade-dog-treat-recipes/
 [Accessed 27 August 2025].
+//part 2
+dog paw: SVG Repo (n.d.) Dog Paw vector SVG icon. Available at: https://www.svgrepo.com/svg/101633/dog-paw
+ (Accessed: 24 September 2025).
+food:  OpenAI (2025) Dog food kibble in bowl [online image]. Available at: https://images.openai.com/
+ (Accessed: 23 September 2025).
+SuperSimple Dev. (n.d.) Search icon and search with voice icon. Available at: https://supersimple.dev/ (Accessed: 26 September 2025).
+
 
 
 ## Part 2: CSS Styling and Responsive Design
-<img width="834" height="538" alt="image" src="https://github.com/user-attachments/assets/387813f3-e9b8-498a-8bc5-deec2306c629" /> at desktop layout is three 
+at desktop layout is three
+<img width="834" height="538" alt="image" src="https://github.com/user-attachments/assets/387813f3-e9b8-498a-8bc5-deec2306c629" />  
+at tablet layout is 2
+<img width="840" height="540" alt="image" src="https://github.com/user-attachments/assets/20b77aac-ceb2-458b-a7aa-3999073472c6" />
+at mobile
+<img width="845" height="575" alt="image" src="https://github.com/user-attachments/assets/257d0ea0-2bc4-457a-9c08-71e93233c2bd" />
 
