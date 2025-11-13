@@ -70,7 +70,9 @@ August 27, 2025: Pushed the code into Github
 -  September 25, 2025 (Afternoon): Created checkout.html with two-column layout (form and summary), card styles, responsive design, and custom touches.
 - September 26, 2025 (Afternoon): Enhanced checkout.html with Font Awesome icons, gradient animation, and responsive logo using picture element.
 - September 26, 2025 (Afternoon): Enhanced about.html with Font Awesome icons, gradient animation, and responsive images using picture element.
-- - November 13, 2025: Fixed part 2 feedback by improving all the images sizes in all pages (tablet,laptop,mobile) and optimize hero image loading.
+
+-part 3
+- November 13, 2025: Fixed part 2 feedback by improving all the images sizes in all pages (tablet,laptop,mobile) and optimize hero image loading.
 
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
