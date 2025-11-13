@@ -53,9 +53,10 @@
       <main>
         <h1>Checkout</h1>  <!--Main heading for the checkout page-->
         <div class="checkout-progess">
-          <div class="progress-step active">Cart</div>
-          <div class="progress-step active">Details</div>
-          <div class="progress-step">Payment</div>
+          <!--Progress steps with icons for visual enhancement-->
+          <div class="progress-step active"><i class="fas fa-shopping-cart"></i>Cart</div>
+          <div class="progress-step active"><i class="fas-fa-user"></i>Details</div>
+          <div class="progress-step"><i class="fas fa-credit-card"></i>Payment</div>
         </div>
         <div class="checkout-container">
           <section class="checkout-form-card">
@@ -92,7 +93,7 @@
                   </div>
                   <div class="form-group">
                     <label for="payment">Payment Method:</label>
-                    <select id="payment" name="payemnt">  <!--Dropdown for payment options-->
+                    <select id="payment" name="payment">  <!--Dropdown for payment options-->
                       <option value="credit">Credit Card</option>
                       <option value="eft">EFT</option>
                       <option value="cash">Cash on Delivery</option>

@@ -8,6 +8,8 @@
        <title>Whiskers and Wag Tails - Home</title> <!--Sets the page title-->
        <link rel="stylesheet" href="css/styles.css">
        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap">
+       <!--load fornt awesome library from CDN to use scalable icons like a paw or cart symbol-->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
         <!--Header with a logo and navigation to other pages-->
@@ -15,7 +17,12 @@
             <div class="header-container">
                 <div class="left-section">
                     <div class="logo">
-                        <img src ="images/logo.png" alt="Whiskers and Wag Tails Logo" width ="150">
+                        <!-- Use picture element to serve different logo images based on screen size for responsiveness -->
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/logo-mobile.png" >
+                            <source media="(min-width:768px)" srcset="images/logo-tablet.png">
+                            <img src ="images/logo.png" alt="Whiskers and Wag Tails Logo" width ="150">
+                        </picture>
                     </div>
                 </div>
                 <div class="middle-section">
@@ -53,32 +60,48 @@
                     <h3>Healthy Food for Cats and Dogs</h3>
                     <p> At Whiskers and Wag Tails we bring you the best and healthy products for your fur babies.We have got everything you need to keep you pets healthy and happy!.</p>
                 </div>
-                <img src="images/pets_with_owner.jpg" alt="Smilling woman with dog and cat" class="hero-image">
+                <picture>
+                    <!-- Load mobile image for screens up to 767px -->
+                    <source media="(max-width: 767px)" srcset="images/pets_with_owner-mobile.jpg">
+                    <!-- Load desktop image for screens 768px and above -->
+                    <source media="(min-width: 768px)" srcset="images/pets_with_owner-mobile.jpg">
+                    <!-- Fallback image if picture element is not supported -->
+                    <img src="images/pets_with_owner.jpg" alt="Smilling woman with dog and cat" class="hero-image" width="100%">
+                </picture>
                 <!--Call to action-->
                 <div class="hero-actions">
-                    <p><a href="products.html"><button class="cta-button">SHOP NOW</button></a> to explore our natural pet food!</p>
+                    <p><a href="products.html"><button class="cta-button"><i class="fas fa-shopping-cart"></i>SHOP NOW</button></a> to explore our natural pet food!</p>
                     <p><a href="about.html" class="learn-more">Learn More</a> about our story and mission</p>
                 </div>
             </section>
             <Section id="featured-products">
                 <h3><u>Featured Products </u></h3>
                 <div class="products-container"> <!--Two divs classes inside a div so that l can create a horintal table -->
-                    <div class="product-item"> 
-                      <img src="images/dog_snacks.jpg" alt="Dog snacks">
+                    <div class="product-item">
+                      <!-- Use picture element to serve different product images based on screen size for responsiveness -->
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/dog_snacks-mobile.jpg">
+                            <source media="(min-width: 768px)" srcset="images/dog_snacks-tablet.jpg">
+                            <img src="images/dog_snacks.jpg" alt="Dog snacks">
+                        </picture>  
                       <p>Low fat chicken dog biscuits - 200g/R50</p>
                     </div>
-                    <div class="product-item">  
-                      <img src="images/cat_snacks.jpg" alt="Cat snacks">
-                      <p>Salmon cat treats - 100g/R40</p>
+                    <div class="product-item"> 
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/cat_snacks-mobile.jpg">
+                            <source media="(min-width: 768px)" srcset="images/cat_snacks-tablet.jpg">
+                            <img src="images/cat_snacks.jpg" alt="Cat snacks">
+                        </picture> 
+                        <p>Salmon cat treats - 100g/R40</p>
                     </div>
                 </div>
             </Section>
             <!--this section is a tip to customers-->
             <section id="pet-tip">
                 <h4>Pet Care Tip</h4>
-                <img src="images/dog-paw-svgrepo-com.svg" alt="paw icon" class="tip-icon"> 
+                <i class="fas fa-paw tip-icon"></i>
                 <div class="tip-box">
-                    <p>Feed your pet <strong>twice</strong> a day for optimal health and hapiness!</p>
+                    <p>Feed your pet <strong>twice</strong> a day for optimal health and happiness!</p>
                     <p>Ensure fresh water is always available to keep your pet hydrated.</p>
                 </div>
             </section>

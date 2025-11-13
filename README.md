@@ -74,6 +74,7 @@ August 27, 2025: Pushed the code into Github
 -part 3
 - November 13, 2025: Fixed part 2 feedback by improving all the images sizes in all pages (tablet,laptop,mobile) and optimize hero image loading.
 
+
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
  -Pet care tips inspired by general veterinary guidelines

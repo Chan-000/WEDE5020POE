@@ -17,6 +17,12 @@ html,body {
   background-color: #F5F5DC;  
    /* prevents horizontal scrolling*/
 }
+/* Ensure images never overflow and keep aspect ratio */
+img, .hero-image, .product-item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 /*Typograph styles*/
 h1, h3, h4 {
@@ -36,7 +42,6 @@ p{
 
 /*Layout structure*/
 header{
-
   background-color: #FFFFFF;
   padding: 0.5rem 0;
   border-bottom: 2px solid #4CAF50 ; /* the three elements inside stands for width, style, color*/
@@ -138,7 +143,7 @@ header{
 
  main{
   width: 100%;
-  padding: 60px 1rem 1rem;
+  padding: 20px 1rem 1rem;
  }
 
  footer{
@@ -159,6 +164,11 @@ header{
   margin-bottom: 1rem;
   min-height: 300px; 
   margin-top: -10rem;
+  /* Use gradient with animation for a dynamic background effect */
+  background: linear-gradient(135deg, #E8F5E9, #F9FDF9);
+  background-size: 200% 200%;
+  /* Apply the gradientShift animation for 5 seconds, easing in and out, looping infinitely */
+  animation: gradientShift 5s ease infinite;
 }
 
 .hero-image {
@@ -183,6 +193,8 @@ header{
   display: inline-block;
   cursor: pointer;
 }
+
+.cta-button .fas {margin-right: 0.5rem;}
 
 .cta-button:hover{
   opacity: 0.7;
@@ -248,6 +260,10 @@ nav ul li a { /*descendant selector*/
  .product-item {
   flex: 1 ; /*equal width for each item*/
   background-color: #FFFFFF;
+  background: linear-gradient(135deg, #E8F5E9, #F9FDF9);
+  background-size: 200% 200%;
+  /* Apply the gradientShift animation for 5 seconds, easing in and out, looping infinitely */
+  animation: gradientShift 5s ease infinite;
   border-radius: 12px;
   padding: 0rem;
   text-align: center;
@@ -284,7 +300,7 @@ nav ul li a { /*descendant selector*/
 
 .tip-box p {font-size: 1.1rem;line-height: 1.6;color: #9E9E9E;}
 
-.tip-icon {max-width: 50px;margin-bottom: 1rem;}
+.tip-icon {max-width: 50px;margin-bottom: 1rem; font-size: 2rem;}
 
 .testimonial-box {
   max-width: 1000px;
@@ -295,18 +311,23 @@ nav ul li a { /*descendant selector*/
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: centre;
+  /* Use gradient with animation for a dynamic background effect */
+  background: linear-gradient(135deg, #E8F5E9, #F9FDF9);
+  background-size: 200% 200%;
+  /* Apply the gradientShift animation for 5 seconds, easing in and out, looping infinitely */
+  animation: gradientShift 5s ease infinite;
 }
 
 .quote {
   font-size: 1.2rem;
   font-style: italic;
   color: #9E9E9E;
-  margin-bottom: 0.5;
+  margin-bottom: 0.5rem;
   position: relative;
 }
 
 .quote::before {
-  content: "";
+  content: "\201C";
   font-size: 2rem;
   position: absolute;
   left: -1.5rem;
@@ -314,7 +335,33 @@ nav ul li a { /*descendant selector*/
   color: #4CAF50;
 }
 
-.author {font-size: 1rem;color: #666666;font-style: italic;margin-top: 0.5rem;}
+.author {
+  font-size: 1rem;
+  color: #666666;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .header-container{flex-direction: column; padding: 1rem;}
+  .middle-section{margin: 1rem 0; max-width: 100%;}
+  .nav ul {flex-direction: column; gap: 0.5rem;}
+  .search-bar {width: 100%;}
+  .hero-text h1 {font-size: 4rem;}
+  .hero-text h3 {font-size: 1.5rem;}
+  .products-container {flex-direction: column;}
+  .product-item{max-width: 100%;}
+  .hero-image, .product-item img {max-width: 100px; height: auto;}
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {font-size: 2.5rem;}
+  .hero-text h3 {font-size: 1.2rem;}
+  .hero-image{max-height: 200px;}
+  #product-grid {grid-template-rows: 1fr;}
+  .products-container{gap: 1rem;}
+  .hero-image, .product-item img {max-width: 100%; height: auto; margin: 0;} 
+}
 
 /*About page styles*/
 .dog-cat-image {
@@ -414,7 +461,7 @@ nav ul li a { /*descendant selector*/
 
 .product-intro{
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   color:#4CAF50;
   margin: 0;
 }
@@ -499,14 +546,14 @@ nav ul li a { /*descendant selector*/
   color: black;
 }
 .add-to-cart:active{
-  opacity: 0,5;
+  opacity: 0.5;
 }
 
 /*responsive design */
 @media (max-width: 768px) {
   #product-grid{grid-template-columns: repeat(2, 1fr);}
   .product-intro h1 {font-size: 2.5rem;}
-  .product-intro p {font-size: 1,1rem;}
+  .product-intro p {font-size: 1.1rem;}
 }
 
 @media (max-width: 480px) {
@@ -552,7 +599,7 @@ nav ul li a { /*descendant selector*/
   flex: 1;
   background: linear-gradient(135deg, #E8F5E9, #FFFFFF);
   background-size: 200% 200%;
-  animation: 15px; /* apply the gradientshift animation for 5seconds easing in and out*/
+  animation: gradientShift 5s ease infinite; /* apply the gradientshift animation for 5seconds easing in and out*/
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -731,7 +778,7 @@ nav ul li a { /*descendant selector*/
 .directions-link:hover {text-decoration: underline;}
 
 /*defines an animation called gradientshift to create a moving background effect*/
-@keyframes gradient-Shift {
+@keyframes gradientShift {
   0% {background-position: 0% 0%;}
   50% {background-position: 100% 100%;}
   100% {background-position: 0% 0%;}
@@ -745,9 +792,15 @@ nav ul li a { /*descendant selector*/
   h4 {font-size: 1.2rem;}
   .form-card .fas {font-size: 1.5rem;}
   .contact-form-section{max-width: 100%;}
+  body {font-size: 1.1rem;}
+  .container {display: block;}
+  img {width: 100%;}
 }
 
 @media (max-width: 480px) {
+  body{font-size: 1rem;}
+  nav{flex-direction: column;}
+  img{width: 100%;}
   h1 {font-size: 1.5rem;}
   h4{font-size: 1rem;}
   .form-group input, .form-group textarea {font-size: 0.875rem;}
