@@ -10,7 +10,7 @@
        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap">
        <!--load fornt awesome library from CDN to use scalable icons like a paw or cart symbol-->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-       <script src="js/script.js"></script>
+       
     </head>
     <body>
         <!--Header with a logo and navigation to other pages-->
@@ -33,7 +33,7 @@
                             <img class="search-icon" src="images/search.svg" >
                             <div class="tooltip">Search</div>
                         </button>
-                        <input class="search-bar" type="textbox" placeholder="Search pet food...">
+                        <input id="searchInput" class="search-bar" type="text" placeholder="Search pet food..." onkeyup="filterProducts()">
                         <button class="voice-search-button">
                             <img class="voice-search-icon" src="images/voice-search-icon.svg">
                             <div class="tooltip">Search with your voice</div>
@@ -118,9 +118,7 @@
         <footer>
             <p>&copy; 2025 Whiskers and Wag Tails.All right reserved</p>
         </footer>
-        <script>
-      alert("Hello! JS works");
-    </script>
+        <script src="js/script.js"></script>
 
     </body>
 </html>
