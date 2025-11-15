@@ -148,3 +148,18 @@ validateForm("checkout-form", [
   { id: "address", label:"Address", required: true},
   { id: "city", label:"city", required: true}
 ]);
+
+
+//mobile Hamburger menu
+const nav = document.querySelector("nav ul");
+if (window.innerWidth <= 768) {
+  const burger = document.createElement("button");
+  burger.innerHTML = "Menu";
+  burger.style = "position:absolute; right: 1rem; top: 1rem; font-size: 1.5rem; background: none; border: none;";
+  document.querySelector(".header-container").appendChild(burger);
+
+  burger.onclick = () => {
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    nav.style.flexDirection = "column";
+  };
+}
