@@ -75,6 +75,7 @@ August 27, 2025: Pushed the code into Github
 - November 15, 2025: added interactive FAQ accordions in contact.html.
 - Novemeber 15, 2025: Added Lightbox to product images with responsive picture support.
 - November 15, 2025: Added cart icon with live badge to navigation on all pages.
+- November 15, 2025: Implemented add-to-cart with quantity and localStorage persistence.
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
  -Pet care tips inspired by general veterinary guidelines
