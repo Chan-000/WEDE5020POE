@@ -104,3 +104,47 @@ window.removeFromCart = function(i) {
 };
 //run on load
 document.addEventListener("DOMContentLoaded", updateCheckoutSummary);
+
+
+// form validation
+function validateForm(formId, fields) {
+  const form = document.getElementById(formId);
+  if(!form) return;
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    let valid = true;
+
+    fields.forEach(f => {
+      const input = document.getElementById(f.id);
+      const val = input.value.trim()
+      let error ="";
+
+      if (f.required && !val) error = `${f.label} required`;
+      else if (f.pattern && !f.pattern.test(val)) error = f.error;
+
+      const msg = input.parentElement.querySelector(".error") || document.createElement("div");
+      msg.className = "error"; msg.style.color = "red"; msg.textContent = error;
+      if(!input.parentElement.querySelector(".error")) input.parentElement.appendChild(msg);
+      if (error) valid = false;
+    });
+
+    if (valid) {
+      document.querySelector(`#${formId} + .confirmation-message`).classList.add("show");
+      form.reset();
+    }
+  });
+}
+
+validateForm("contact-form", [
+  { id: "name", label: "Name", required:true},
+  { id: "email", label: "Email", required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, error: "Invalid email" },
+  { id: "message", label: "Message", required: true}
+]);
+
+validateForm("checkout-form", [
+  { id: "name", label: "Name", required: true},
+  { id: "phone", label: "Phone", required: true, pattern: /^\+?\d{10,15}$/, error: "Invalid phone" },
+  { id: "address", label:"Address", required: true},
+  { id: "city", label:"city", required: true}
+]);
