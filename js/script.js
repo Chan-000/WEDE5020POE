@@ -73,3 +73,34 @@ window.addToCart = function (btn) {
   saveCart();
   alert(`${name} added!`);
 };
+
+//dynamic checkout summary
+function updateCheckoutSummary() {
+  const list = document.getElementById("cartItems");
+  if(!list) return;
+
+  list.innerHTML = "";
+  let subtotal = 0;
+
+  cart.forEach((item, i) => {
+    subtotal += item.price * item.qty;
+    const li = document.createElement("li");
+    li.innerHTML = `${item.name} x${item.qty} - R${item.price * item.qty} 
+      <button onclick="removeFromCart(${i})" style="color:red; border:none; background:none;">×</button>`;
+    list.appendChild(li);
+  });
+
+  const shipping = subtotal > 500 ? 0 : 20;
+  document.querySelector(".oder-summary-card p:nth-of-type(1)")?.insertAdjacentHTML("afterend",
+    `<p><b>Shipping:</b> R${shipping} ${subtotal > 500 ? "(Free)" : ""}</p>`
+  );
+   document.querySelector(".total-price").textContent = `R${subtotal + shipping}`;
+}
+
+window.removeFromCart = function(i) {
+  cart.splice(i, 1);
+  saveCart();
+  updateCheckoutSummary();
+};
+//run on load
+document.addEventListener("DOMContentLoaded", updateCheckoutSummary);
