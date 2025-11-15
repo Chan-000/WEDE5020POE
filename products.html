@@ -9,7 +9,8 @@
        <link rel="stylesheet" href="css/styles.css">
        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-       
+       <!--lightbox css-->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
       </head>
     <body>
       <!--Header with a logo and navigation to other pages-->
@@ -60,13 +61,20 @@
           </div>
         </section>
         <section id="product-grid">
+          <!--lightbox link aaround picture-->
           <div class="product-card">
-            <picture>
-              <!-- Use picture element to serve different product images based on screen size for responsiveness -->
-              <source media="(max-width: 767px)" srcset="images/dog_food-mobile.jpg">
-              <source media="(min-width: 768px)" srcset="images/dog_food-tablet.jpg">
-              <img src="images/dog_food.jpg" alt="Dog food">
-            </picture>
+            <a
+              href="images/dog_food.jpg"
+              data-lightbox="products"
+              data-title="urkey thigh and Oats">
+
+              <picture>
+                <!-- Use picture element to serve different product images based on screen size for responsiveness -->
+                <source media="(max-width: 767px)" srcset="images/dog_food-mobile.jpg">
+                <source media="(min-width: 768px)" srcset="images/dog_food-tablet.jpg">
+                <img src="images/dog_food.jpg" alt="Dog food">
+             </picture>
+            </a>
             <div class="product-details">
               <div class="product-name">Turkey thigh and Oats</div>
               <div class="product-recipe">
@@ -77,12 +85,18 @@
             </div>
           </div>
           <div class="product-card">
-            <picture>
-              <!-- Use picture element to serve different product images based on screen size for responsiveness -->
-              <source media="(max-width: 767px)" srcset="images/dog_food2-mobile.jpg">
-              <source media="(min-width: 768px)" srcset="images/dog_food2.jpg">
-              <img src="images/dog_food2.jpg" alt="Dog food">
-            </picture>
+            <a
+              href="images/dog_food2.jpg"
+              data-lightbox="products"
+              data-title="Chicken and Carrot Crunch Bite">
+
+              <picture>
+                <!-- Use picture element to serve different product images based on screen size for responsiveness -->
+                <source media="(max-width: 767px)" srcset="images/dog_food2-mobile.jpg">
+                <source media="(min-width: 768px)" srcset="images/dog_food2.jpg">
+                <img src="images/dog_food2.jpg" alt="Dog food">
+              </picture>
+            </a>
             <div class="product-details">
               <div class="product-name">Chicken and Carrot Crunch Bites</div>
               <div class="product-recipe">
@@ -93,12 +107,18 @@
             </div>
           </div>
           <div class="product-card">
-            <picture>
-              <!-- Use picture element to serve different product images based on screen size for responsiveness -->
-              <source media="(max-width: 767px)" srcset="images/dog_snacks-mobile.jpg">
-              <source media="(min-width: 768px)" srcset="images/dog_snacks-tablet.jpg">
-              <img src="images/dog_snacks.jpg" alt="Dog food in a bowl">
-            </picture>
+            <a
+              href="images/dog_snacks.jpg"
+              data-light="products"
+              data-title="Low Fat Chicken Biscuit">
+
+              <picture>
+                <!-- Use picture element to serve different product images based on screen size for responsiveness -->
+                <source media="(max-width: 767px)" srcset="images/dog_snacks-mobile.jpg">
+                <source media="(min-width: 768px)" srcset="images/dog_snacks-tablet.jpg">
+                <img src="images/dog_snacks.jpg" alt="Dog food in a bowl">
+              </picture>
+            </a>
             <div class="product-details">
               <div class="product-name">Low Fat Chicken Biscuit</div>
               <div class="product-recipe">
@@ -109,12 +129,18 @@
             </div>
           </div>
           <div class="product-card">
-            <picture>
-              <!-- Use picture element to serve different product images based on screen size for responsiveness -->
-              <source media="(max-width: 767px)" srcset="images/dog_snacks2-mobile.jpg">
-              <source media="(min-width: 768px)" srcset="images/dog_snacks2-tablet.jpg">
-              <img src="images/dog_snacks2.jpg" alt="crunchy peanut pumpkin dog treats">
-            </picture>
+            <a
+              href="images/dog_snacks2.jpg"
+              data-lightbox="products"
+              data-title="Crunchy Peanut & Pumpkin Bones">
+
+              <picture>
+                <!-- Use picture element to serve different product images based on screen size for responsiveness -->
+                <source media="(max-width: 767px)" srcset="images/dog_snacks2-mobile.jpg">
+                <source media="(min-width: 768px)" srcset="images/dog_snacks2-tablet.jpg">
+                <img src="images/dog_snacks2.jpg" alt="crunchy peanut pumpkin dog treats">
+              </picture>
+            </a>
             <div class="product-details">
               <div class="product-name">Crunchy Peanut & Pumpkin Bones</div>
               <div class="product-recipe">
@@ -125,12 +151,18 @@
             </div>
           </div>
           <div class="product-card">
-            <picture>
-              <!-- Use picture element to serve different product images based on screen size for responsiveness -->
-              <source media="(max-width: 767px)" srcset="images/cat_food-mobile.jpg">
-              <source media="(min-width: 768px)" srcset="images/cat_food-tablet.jpg">
-              <img src="images/cat_food.jpg" alt="cat food">
-            </picture>
+            <a
+              href="images/cat_food.jpg"
+              data-lightbox="products"
+              data-title="Wholesome Beef & Veggie kibble">
+
+              <picture>
+                <!-- Use picture element to serve different product images based on screen size for responsiveness -->
+                <source media="(max-width: 767px)" srcset="images/cat_food-mobile.jpg">
+                <source media="(min-width: 768px)" srcset="images/cat_food-tablet.jpg">
+                <img src="images/cat_food.jpg" alt="cat food">
+              </picture>
+            </a>
             <div class="product-details">
               <div class="product-name">Wholesome Beef & Veggie kibble</div>
               <div class="product-recipe">
@@ -141,12 +173,18 @@
             </div>
           </div>
           <div class="product-card">
-            <picture>
-              <!-- Use picture element to serve different product images based on screen size for responsiveness -->
-              <source media="(max-width: 767px)" srcset="images/cat_food2-mobile.jpg">
-              <source media="(min-width: 768px)" srcset="images/cat_food2-tablet.jpg">
-              <img src="images/cat_food2.jpg" alt="Bowl of salmon and tuna cat kibble">
-            </picture>
+            <a
+              href="images/cat_food2.jpg"
+              data-lightbox="products"
+              data-title="Salmon & Tuna Ocean kibble">
+
+              <picture>
+                <!-- Use picture element to serve different product images based on screen size for responsiveness -->
+                <source media="(max-width: 767px)" srcset="images/cat_food2-mobile.jpg">
+                <source media="(min-width: 768px)" srcset="images/cat_food2-tablet.jpg">
+                <img src="images/cat_food2.jpg" alt="Bowl of salmon and tuna cat kibble">
+              </picture>
+            </a>
             <div class="product-details">
               <div class="product-name">Salmon & Tuna Ocean kibble</div>
               <div class="product-recipe">
@@ -157,12 +195,18 @@
             </div>
           </div>
           <div class="product-card">
-            <picture>
-              <!-- Use picture element to serve different product images based on screen size for responsiveness -->
-              <source media="(max-width: 767px)" srcset="images/cat_snacks-mobile.jpg">
-              <source media="(min-width: 768px)" srcset="images/cat_snacks-tablet.jpg">
-              <img src="images/cat_snacks.jpg" alt="cat snacks">
-            </picture>
+            <a
+              href="images/cat_snacks.jpg"
+              data-lightbox="products"
+              data-title="Salmon cat treats">
+
+              <picture>
+                <!-- Use picture element to serve different product images based on screen size for responsiveness -->
+                <source media="(max-width: 767px)" srcset="images/cat_snacks-mobile.jpg">
+                <source media="(min-width: 768px)" srcset="images/cat_snacks-tablet.jpg">
+                <img src="images/cat_snacks.jpg" alt="cat snacks">
+              </picture>
+            </a>
             <div class="product-details">
               <div class="product-name">Salmon cat treats</div>
               <div class="product-recipe">
@@ -173,12 +217,18 @@
             </div>
           </div>    
           <div class="product-card">
-            <picture>
-              <!-- Use picture element to serve different product images based on screen size for responsiveness -->
-              <source media="(max-width: 767px)" srcset="images/cat_snacks2-mobile.png">
-              <source media="(min-width: 768px)" srcset="images/cat_snacks2-tablet.png">
-              <img src="images/cat_snacks2.png" alt="chicken and salmon cat snacks">
-            </picture>
+            <a
+              href="images/cat_snacks2.png"
+              data-lightbox="products"
+              data-title="Deluxe chicken & salmon Snack Sticks">
+
+              <picture>
+                <!-- Use picture element to serve different product images based on screen size for responsiveness -->
+                <source media="(max-width: 767px)" srcset="images/cat_snacks2-mobile.png">
+                <source media="(min-width: 768px)" srcset="images/cat_snacks2-tablet.png">
+                <img src="images/cat_snacks2.png" alt="chicken and salmon cat snacks">
+              </picture>
+            </a>
             <div class="product-details">
               <div class="product-name">Deluxe chicken & salmon Snack Sticks</div>
               <div class="product-recipe">
@@ -189,12 +239,18 @@
             </div>
           </div> 
           <div class="product-card">
+            <a
+            href="images/food.jpg"
+            data-lightbox="products"
+            data-title="Lamb & Brown Rice Delight">
+
             <picture>
               <!-- Use picture element to serve different product images based on screen size for responsiveness -->
               <source media="(max-width: 767px)" srcset="images/food-mobile.jpg">
               <source media="(min-width: 768px)" srcset="images/food-tablet.jpg">
               <img src="images/food.jpg" alt="pet food">
             </picture>
+            </a>
             <div class="product-details">
               <div class="product-name">Lamb & Brown Rice Delight</div>
               <div class="product-recipe">
@@ -211,6 +267,7 @@
       <p>Thank you for visiting our website!!!</p>
       <p>&copy; 2025 Whiskers and Wag Tails.All right reserved</p>
     </footer>
-    <script src="js/script.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+     <script src="js/script.js"></script>
     </body>
 </html>    
