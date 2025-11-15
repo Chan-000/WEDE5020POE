@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   //search function
   window.filterProducts = function () {
-    const input = searchInput.value.toLowerCase();
+    const searchInput = searchInput.value.toLowerCase();
     console.log("searching for: ", input);
 
     products.forEach(product => {
@@ -47,3 +47,29 @@ document.querySelectorAll('.accordion-btn').forEach(btn => {
     icon.classList.toggle('fa-chevron-up');
   });
 });
+
+// addtocart
+let cart = JSON.parse(localStorage.getItem("petCart")) || [];
+
+function saveCart() {
+  localStorage.setItem("petCart", JSON.stringify(cart));
+  updateCartBadge();
+}
+
+function updateCartBadge() {
+  const badge = document.getElementById("cartBadge");
+  if(badge) badge.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+}
+
+window.addToCart = function (btn) {
+  const card = btn.closest(".product-card");
+  const name = card.querySelector(".product-name").textContent;
+  const price = parseInt(card.querySelector(".product-price").textContent.match(/R(\d+)/)[1]);
+
+  const existing = cart.find(item => item.name === name);
+  if(existing) existing.qty++;
+  else cart.push({name, price, qty: 1});
+
+  saveCart();
+  alert(`${name} added!`);
+};
