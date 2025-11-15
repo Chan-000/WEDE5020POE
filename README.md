@@ -71,6 +71,7 @@ August 27, 2025: Pushed the code into Github
 - 13 November, 2025: No corrections required for Part 2, all requirements met. Proceeding with Part 3 enhancements.
 - November 13, 2025: Fixed part 2 feedback by improving all the images sizes in all pages (tablet,laptop,mobile) and optimize hero image loading.
 - November 14, 2025: Created a script.js file and likled it to html pages.
+- November 14, 2025: created a dynamic search bar which allows people to search, and l am still trying to make it work.
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
  -Pet care tips inspired by general veterinary guidelines
