@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const searchInput = document.getElementById("searchInput");
   if (!searchInput) {
     console.error("ERROR: #searchInput not found");
-    return;
+    return; 
   }
 
   //check if products exists
@@ -33,6 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   };
-  filterProducts();
+  filterProducts();s
 
 });
