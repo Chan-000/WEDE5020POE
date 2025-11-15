@@ -36,3 +36,14 @@ document.addEventListener("DOMContentLoaded", function() {
   filterProducts();s
 
 });
+
+//accordion - works immediately
+document.querySelectorAll('.accordion-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const panel = btn.nextElementSibling;
+    const icon = btn.querySelector('i');
+    panel.classList.toggle('show');
+    icon.classList.toggle('fa-chevron-down');
+    icon.classList.toggle('fa-chevron-up');
+  });
+});

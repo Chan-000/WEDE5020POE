@@ -806,24 +806,31 @@ nav ul li a { /*descendant selector*/
   .form-group input, .form-group textarea {font-size: 0.875rem;}
 }
 
+ /*part 3 css sytles*/
+.accordion-btn{
+  width: 100%;
+  background: #4CAF50;
+  color: white;
+  padding: 15px;
+  text-align: left;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.panel {
+  padding: 0 15px;
+  background: #E8F5E9;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.panel.show {
+  max-height: 300px;
+  padding: 15px;
+}
 
