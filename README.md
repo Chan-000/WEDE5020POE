@@ -78,6 +78,7 @@ August 27, 2025: Pushed the code into Github
 - November 15, 2025: Implemented add-to-cart with quantity and localStorage persistence.
 - November 15, 2025: added form validation for contact and checkout page.
 - November 15, 2025: Added mobile harmburger menue.
+- November 15, 2025: Added meta description and keyword to all pages.
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
  -Pet care tips inspired by general veterinary guidelines
