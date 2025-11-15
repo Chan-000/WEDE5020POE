@@ -10,7 +10,8 @@
        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap">
        <!--load fornt awesome library from CDN to use scalable icons like a paw or cart symbol-->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-       
+       <!--lightbox cnd-->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     </head>
     <body>
         <!--Header with a logo and navigation to other pages-->
@@ -79,20 +80,32 @@
                 <h3><u>Featured Products </u></h3>
                 <div class="products-container"> <!--Two divs classes inside a div so that l can create a horintal table -->
                     <div class="product-item">
-                      <!-- Use picture element to serve different product images based on screen size for responsiveness -->
-                        <picture>
+                        <a
+                          href="images/dog_snacks.jpg"
+                          data-lightbox="products"
+                          data-title="Low Fat Chicken Dog Biscuits - 200g/R50">
+
+                        <!-- Use picture element to serve different product images based on screen size for responsiveness -->
+                          <picture>
                             <source media="(max-width: 767px)" srcset="images/dog_snacks-mobile.jpg">
                             <source media="(min-width: 768px)" srcset="images/dog_snacks-tablet.jpg">
                             <img src="images/dog_snacks.jpg" alt="Dog snacks">
-                        </picture>  
-                      <p>Low fat chicken dog biscuits - 200g/R50</p>
+                          </picture>
+                        </a>
+                        <p>Low fat chicken dog biscuits - 200g/R50</p>
                     </div>
                     <div class="product-item"> 
-                        <picture>
+                        <a
+                          href="images/cat_snacks.jpg"
+                          data-lightbox="products"
+                          data-title="Salmon cat treats - 100g/R40">
+
+                          <picture>
                             <source media="(max-width: 767px)" srcset="images/cat_snacks-mobile.jpg">
                             <source media="(min-width: 768px)" srcset="images/cat_snacks-tablet.jpg">
                             <img src="images/cat_snacks.jpg" alt="Cat snacks">
-                        </picture> 
+                          </picture> 
+                        </a>
                         <p>Salmon cat treats - 100g/R40</p>
                     </div>
                 </div>
@@ -119,6 +132,7 @@
             <p>&copy; 2025 Whiskers and Wag Tails.All right reserved</p>
         </footer>
         <script src="js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
     </body>
 </html>
