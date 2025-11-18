@@ -1,0 +1,23 @@
+<!--a map of website that helps search engines find all my pages faster-->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://chan-000.github.io/WEDE5020POE/</loc>
+  </url>
+  <url>
+    <loc>https://chan-000.github.io/WEDE5020POE/index.html</loc>
+  </url>
+  <url>
+    <loc>https://chan-000.github.io/WEDE5020POE/about.html</loc>
+  </url>
+  <url>
+    <loc>https://chan-000.github.io/WEDE5020POE/products.html</loc>
+  </url>
+  <url>
+    <loc>https://chan-000.github.io/WEDE5020POE/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://chan-000.github.io/WEDE5020POE/checkout.html</loc>
+  </url>
+</urlset>
+

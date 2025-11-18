@@ -1,54 +1,59 @@
-// script.js working search filter
-console.log("script.js loaded");
+console.log("Script.js loaded")
 
-// wait for the page to fully load
-document.addEventListener("DOMContentLoaded", function() {
-  console.log("page loaded. Ready to search.");
+//runs when page loads
+document.addEventListener("DOMContentLoaded", () =>{
+  console.log("page fully loaded");
 
-  //check if input exists
+  initSearch();
+  initAccordion();
+  updateCheckoutSummary();
+  initFormValidation();
+  initHamburgerMenu();
+});
+
+
+//------------------------------
+// SEARCH FUNCTION
+//------------------------------
+function initSearch() {
   const searchInput = document.getElementById("searchInput");
-  if (!searchInput) {
-    console.error("ERROR: #searchInput not found");
-    return; 
-  }
+  const products = document.querySelectorAll(".products-item");
 
-  //check if products exists
-  const products = document.querySelectorAll(".product-item");
-  if (products.length == 0) {
-    console.error("Error: no .product-item found!");
-    return;
-  }
+  if (!searchInput || products.length === 0 ) return;
 
-  //search function
-  window.filterProducts = function () {
-    const searchInput = searchInput.value.toLowerCase();
-    console.log("searching for: ", input);
+  function filterProducts() {
+    const query = searchInput.value.toLowerCase().trim();
 
-    products.forEach(product => {
-      const text = product.textContent.toLowerCase();
-      if (text.includes(input)) {
-        product.style.display = "block";
-      } else {
-        product.style.display = "none";
-      }
+    products.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(query) ? "" : "none";
     });
-  };
-  filterProducts();s
+  }
 
-});
+  searchInput.addEventListener("input", filterProducts);
+}
 
-//accordion - works immediately
-document.querySelectorAll('.accordion-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const panel = btn.nextElementSibling;
-    const icon = btn.querySelector('i');
-    panel.classList.toggle('show');
-    icon.classList.toggle('fa-chevron-down');
-    icon.classList.toggle('fa-chevron-up');
+
+//--------------------------------
+//ACCORDION
+//--------------------------------
+function initAccordion() {
+  document.querySelectorAll('.accordion-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = btn.nextElementSibling;
+      const icon = btn.querySelector('i');
+
+      panel.classList.toggle('show');
+      icon.classList.toggle('fa-chevron-down');
+      icon.classList.toggle('fa-chevron-up');
+    });
   });
-});
+}
 
-// addtocart
+
+//-------------------------------
+// CART SYSTEM
+//-------------------------------
 let cart = JSON.parse(localStorage.getItem("petCart")) || [];
 
 function saveCart() {
@@ -56,13 +61,16 @@ function saveCart() {
   updateCartBadge();
 }
 
-function updateCartBadge() {
+function updateCartBadge(){
   const badge = document.getElementById("cartBadge");
-  if(badge) badge.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+  if (badge) {
+    badge.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+  }
 }
 
 window.addToCart = function (btn) {
   const card = btn.closest(".product-card");
+  if (!card) return;
   const name = card.querySelector(".product-name").textContent;
   const price = parseInt(card.querySelector(".product-price").textContent.match(/R(\d+)/)[1]);
 
@@ -71,10 +79,13 @@ window.addToCart = function (btn) {
   else cart.push({name, price, qty: 1});
 
   saveCart();
-  alert(`${name} added!`);
+  alert(`${name} added to cart!`);
 };
 
-//dynamic checkout summary
+
+//---------------------------------
+//DYNAMIC CHECKOUT SUMMARY
+//---------------------------------
 function updateCheckoutSummary() {
   const list = document.getElementById("cartItems");
   if(!list) return;
@@ -106,60 +117,102 @@ window.removeFromCart = function(i) {
 document.addEventListener("DOMContentLoaded", updateCheckoutSummary);
 
 
-// form validation
+//-------------------------------
+// FORM VALIDATION
+//-------------------------------
+function initFormValidation(){
+  validateForm("contact-form", [
+    { id: "name", label: "Name", required:true},
+    { id: "email", label: "Email", required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, error: "Invalid email" },
+    { id: "message", label: "Message", required: true}
+  ]);
+
+  validateForm("checkout-form", [
+    { id: "name", label: "Name", required: true},
+    { id: "phone", label: "Phone", required: true, pattern: /^(\+27|0)[0-9]{9}$/, error: "Invalid phone" },
+    { id: "address", label:"Address", required: true},
+    { id: "city", label:"City", required: true},
+    { id: "terms", label: "Terms & Conditions", required: true}
+  ]);
+}
+
 function validateForm(formId, fields) {
   const form = document.getElementById(formId);
   if(!form) return;
 
+  const confirmation = form.querySelector(".confirmation-message");
+
   form.addEventListener("submit", e => {
     e.preventDefault();
+
+    // remove old errors
+    form.querySelectorAll(".error-msg").forEach(el => el.remove());
     let valid = true;
 
-    fields.forEach(f => {
-      const input = document.getElementById(f.id);
-      const val = input.value.trim()
+    fields.forEach(rule => {
+      const field = document.getElementById(rule.id);
+      const value = field.value.trim();
       let error ="";
 
-      if (f.required && !val) error = `${f.label} required`;
-      else if (f.pattern && !f.pattern.test(val)) error = f.error;
+      //required
+      if (rule.required && !value) {
+        error = `${rule.label} is required.`;
+      }
+      // email pattern
+      else if (rule.id == "email" && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        error = "Please enter a valid email.";
+      }
+      // phone pattern
+      else if (rule.id == "phone" && value && !/^(\+27|0)[0-9]{9}$/.test(value.replace(/\s/g, ''))) {
+        error = "Invalid phone. Use +27 63 267 5678 or 0632675678";
+      }
+      // terms checkbox
+      else if (rule.id === "terms" && !field.checked) {
+        error = "You must agree to the terms";
+      }
 
-      const msg = input.parentElement.querySelector(".error") || document.createElement("div");
-      msg.className = "error"; msg.style.color = "red"; msg.textContent = error;
-      if(!input.parentElement.querySelector(".error")) input.parentElement.appendChild(msg);
-      if (error) valid = false;
+      if(error) {
+        valid = false;
+        const errorEl = document.createElement("div");
+        errorEl.className = "error-msg";
+        errorEl.style.color = "red";
+        errorEl.style.fontSize = "0.9rem";
+        errorEl.style.marginTop = "0.3rem";
+        errorEl.textContent = error;
+        field.parentElement.appendChild(errorEl);
+      }    
     });
 
     if (valid) {
-      document.querySelector(`#${formId} + .confirmation-message`).classList.add("show");
-      form.reset();
+       confirmation.textContent = formId === "contact-form"
+          ? "Thank you! Your message has been sent."
+          : "Order placed successfully"
+       confirmation.classList.add("show");
+       form.reset();
+       setTimeout(() => confirmation.classList.remove("show"), 5000);
     }
   });
 }
 
-validateForm("contact-form", [
-  { id: "name", label: "Name", required:true},
-  { id: "email", label: "Email", required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, error: "Invalid email" },
-  { id: "message", label: "Message", required: true}
-]);
 
-validateForm("checkout-form", [
-  { id: "name", label: "Name", required: true},
-  { id: "phone", label: "Phone", required: true, pattern: /^\+?\d{10,15}$/, error: "Invalid phone" },
-  { id: "address", label:"Address", required: true},
-  { id: "city", label:"city", required: true}
-]);
+//-----------------------------
+//MOBILE BURGER MENU
+//-----------------------------
+function initHamburgerMenu(){
+  if (window.innerWidth > 768) return;
 
+  const nav = document.querySelector("nav ul");
+  const header = document.querySelector(".header-container");
+  if (!nav || !header) return;
 
-//mobile Hamburger menu
-const nav = document.querySelector("nav ul");
-if (window.innerWidth <= 768) {
   const burger = document.createElement("button");
   burger.innerHTML = "Menu";
-  burger.style = "position:absolute; right: 1rem; top: 1rem; font-size: 1.5rem; background: none; border: none;";
-  document.querySelector(".header-container").appendChild(burger);
+  burger.style = "position:absolute; right:1rem; top:1rem; font-size:1.1rem; background:none; border:none;";
+  header.appendChild(burger);
 
-  burger.onclick = () => {
-    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+  burger.addEventListener("click", () => {
+    const visible = nav.style.display === "flex";
+    nav.style.display = visible ? "none" : "flex";
     nav.style.flexDirection = "column";
-  };
+  });
 }

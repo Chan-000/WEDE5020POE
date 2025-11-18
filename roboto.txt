@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourusername.github.io/whiskers-wag-tails/sitemap.xml
+Sitemap: https://chan-000.github.io/WEDE5020POE/sitemap.xml

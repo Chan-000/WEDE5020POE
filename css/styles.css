@@ -849,3 +849,20 @@ nav ul li a { /*descendant selector*/
   align-items: center;
   justify-content: center;
 }
+
+/*error msg styles*/
+.error-msg {
+  color: #D32F2F;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.confirmation-message.show {
+  display: block;
+  background: #E8F5E9;
+  color:#2E7D32;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 1rem;
+}

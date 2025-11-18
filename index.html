@@ -11,7 +11,7 @@
        <!--load fornt awesome library from CDN to use scalable icons like a paw or cart symbol-->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
        <!--lightbox cnd-->
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
        <meta name="description" content="Natural, healthy pet food for cats and dogs in Cape Town. Free delivery over R500.">
        <meta name="keywords" content="pet food, dog treats, cat snacks, natural pet food, Cape Town">
     </head>
@@ -64,21 +64,26 @@
                     <h3>Healthy Food for Cats and Dogs</h3>
                     <p> At Whiskers and Wag Tails we bring you the best and healthy products for your fur babies.We have got everything you need to keep you pets healthy and happy!.</p>
                 </div>
-                <picture>
-                    <!-- Load mobile image for screens up to 767px -->
-                    <source media="(max-width: 767px)" srcset="images/pets_with_owner-mobile.jpg">
-                    <!-- Load desktop image for screens 768px and above -->
-                    <source media="(min-width: 768px)" srcset="images/pets_with_owner-mobile.jpg">
-                    <!-- Fallback image if picture element is not supported -->
-                    <img src="images/pets_with_owner.jpg" alt="Smilling woman with dog and cat" class="hero-image" width="100%">
-                </picture>
-                <!--Call to action-->
+                    <a
+                       href="images/pets_with_owner.jpg"
+                       data-lightbox="products"
+                       data-title="Smilling woman with dog and cat">
+
+                       <picture>
+                            <!--load mobile image for up to 767px-->
+                            <source media="(max-width: 767px)" srcset="images/pets_with_owner-mobile.jpg">
+                            <!-- Load desktop image for screens 768px and above -->
+                            <source media="(min-width: 768px)" srcset="images/pets_with_owner-mobile.jpg">
+                            <!-- Fallback image if picture element is not supported -->
+                            <img src="images/pets_with_owner.jpg" alt="Smilling woman with dog and cat" class="hero-image" width="100%">
+                       </picture>
+                    </a>
                 <div class="hero-actions">
                     <p><a href="products.html"><button class="cta-button"><i class="fas fa-shopping-cart"></i>SHOP NOW</button></a> to explore our natural pet food!</p>
                     <p><a href="about.html" class="learn-more">Learn More</a> about our story and mission</p>
                 </div>
             </section>
-            <Section id="featured-products">
+            <section id="featured-products">
                 <h3><u>Featured Products </u></h3>
                 <div class="products-container"> <!--Two divs classes inside a div so that l can create a horintal table -->
                     <div class="product-item">
@@ -96,7 +101,7 @@
                         </a>
                         <p>Low fat chicken dog biscuits - 200g/R50</p>
                     </div>
-                    <div class="product-item"> 
+                    <div class="product-item" data-category="dog"> 
                         <a
                           href="images/cat_snacks.jpg"
                           data-lightbox="products"
@@ -111,7 +116,7 @@
                         <p>Salmon cat treats - 100g/R40</p>
                     </div>
                 </div>
-            </Section>
+            </section>
             <!--this section is a tip to customers-->
             <section id="pet-tip">
                 <h4>Pet Care Tip</h4>
@@ -139,8 +144,8 @@
         <footer>
             <p>&copy; 2025 Whiskers and Wag Tails.All right reserved</p>
         </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
         <script src="js/script.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
     </body>
 </html>
