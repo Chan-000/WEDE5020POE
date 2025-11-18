@@ -147,5 +147,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
         <script src="js/script.js"></script>
 
+        <!--cart modal-->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <i class="fas fa-check-circle"></i>
+                <h2>Added to cart!</h2>
+                <p id="modalProductName"></p>
+                <button onclick="document.getElementById('cartModal').style.display='none'" style="margin-top:1rem; padding:0.8rem 2rem; background:#4CAF50; color:white; border:none; border-radius:50px; cursor:pointer;">Continue Shopping</button>
+            </div>
+        </div>
+
     </body>
 </html>

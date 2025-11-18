@@ -866,3 +866,34 @@ nav ul li a { /*descendant selector*/
   text-align: center;
   margin-top: 1rem;
 }
+
+/*Modal*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+  justify-content: centre;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  animation: pop 0.4s ease ;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content i {
+  font-size: 4rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+@keyframes pop {
+  0% {transform: scale (0.5); opacity: 0;}
+  100% {transform: scale(1); opacity: 1; }
+}

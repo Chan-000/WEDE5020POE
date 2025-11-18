@@ -96,13 +96,14 @@
           </section>
           <section class="location-section">
             <h3>Find our store</h3>
-            <picture>
-              <source media="(max-width: 767px)" srcset="images/location-mobile.png">
-              <source media="(min-width: 768px)" srcset="images/location-tablet.png"> 
-              <img src="images/location.png" alt="Map shpwing Main Road, Green Point and Bird Street, Stellenbosch"> <!--Placeholder for a screenshot-->
-            </picture>
+            <!--interactive map-->
             <div id="map" style="height: 400px; width: 100%; border-radius: 15px; margin: 20px 0;"></div>
-            <p>Source: OpenStreetMap |<a href="https://www.google.com/maps/dir/?api=1&origin=123+Main+Road,+Green+Point,+Cape+Town,+8001&destination=456+Bird+Street,+Stellenbosch,+7600" target="_blank">Get Directions</a></p> <!--Link to Google Maps for directions-->
+            <p style="text-align: center; font-size: 0.9rem; color: #666666;">
+              Source: OpenStreetMap |
+              <a href="https://www.google.com/maps/dir/?api=1&origin=123+Main+Road,+Green+Point,+Cape+Town,+8001&destination=456+Bird+Street,+Stellenbosch,+7600" target="_blank">
+                Get Directions
+              </a>
+            </p> 
           </section>
           <section class="faq-section">
             <h2>Frequently Asked Questions</h2>
@@ -168,9 +169,9 @@
 
               //pickup point - Stellenbosch
               L.marker([-33.938, 18.861]).addTo(map)
-                .bindPopup('<b>Pickup Point</b><br>456 Bird Street, Stellenbosch');
+                .bindPopup('<b>Pickup Point</b><br>456 Bird Street, Stellenbosch');        
             });
           </script>
-          <script src="js/script.js"></script>                                                                                                                                                                                                             
+          <script src="js/script.js"></script>                                                                                                                                                                                                            
     </body>
 </html>    
