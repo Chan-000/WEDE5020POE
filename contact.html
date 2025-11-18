@@ -95,13 +95,14 @@
             </fieldset>
           </section>
           <section class="location-section">
+            <h3>Find our store</h3>
             <picture>
               <source media="(max-width: 767px)" srcset="images/location-mobile.png">
               <source media="(min-width: 768px)" srcset="images/location-tablet.png"> 
               <img src="images/location.png" alt="Map shpwing Main Road, Green Point and Bird Street, Stellenbosch"> <!--Placeholder for a screenshot-->
             </picture>
-            <p>Source:Google maps (2025)</p>
-            <p><a href="https://www.google.com/maps/dir/?api=1&origin=123+Main+Road,+Green+Point,+Cape+Town,+8001&destination=456+Bird+Street,+Stellenbosch,+7600" target="_blank">Get Directions</a></p> <!--Link to Google Maps for directions-->
+            <div id="map" style="height: 400px; width: 100%; border-radius: 15px; margin: 20px 0;"></div>
+            <p>Source: OpenStreetMap |<a href="https://www.google.com/maps/dir/?api=1&origin=123+Main+Road,+Green+Point,+Cape+Town,+8001&destination=456+Bird+Street,+Stellenbosch,+7600" target="_blank">Get Directions</a></p> <!--Link to Google Maps for directions-->
           </section>
           <section class="faq-section">
             <h2>Frequently Asked Questions</h2>
@@ -146,7 +147,30 @@
           <!--Contains the footer information-->
           <footer>
             <p>&copy:2025 Whiskers and Wag Tails.All right reserved</p>
-          </footer>       
+          </footer> 
+          <!--leeflet map cdn-->  
+          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+          <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+   
+          <script>
+            //Interactive map
+            document.addEventListener("DOMContentLoaded", function(){
+              const map = L.map('map').setView([-33.925, 18.558], 11);
+
+              L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+              }).addTo(map);
+
+              //main store - Green point
+              L.marker([-33.907, 18.403]).addTo(map)
+                .bindPopup('<b>Main Store</b><br>123 Main Road, Green Point')
+                .openPopup();
+
+              //pickup point - Stellenbosch
+              L.marker([-33.938, 18.861]).addTo(map)
+                .bindPopup('<b>Pickup Point</b><br>456 Bird Street, Stellenbosch');
+            });
+          </script>
           <script src="js/script.js"></script>                                                                                                                                                                                                             
     </body>
 </html>    
