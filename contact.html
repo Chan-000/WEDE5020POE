@@ -97,10 +97,21 @@
                   <input type="email" id="email" name="email" placeholder="Enter your email"> <!--Email input-->
                 </div>
                 <div class="form-group">
-                  <label for="message">Message:</label>
+                  <label for="c_subject">Subject *</label>
+                  <select id="c_subject" required>
+                    <option value="">Choose one...</option>
+                    <option>General Question</option>
+                    <option>Order Help</option>
+                    <option>Delivery Query</option>
+                    <option>Become a Sponsor</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message"> Your Message:</label>
                   <textarea id="message" name="message" placeholder="Enter your message" rows="4"></textarea> <!--Text area for message-->
                 </div>
-                <button type="submit" class="submit-button">Send Message</button>
+                <button type="submit" class="submit-button">Send Message via Email</button>
                 <div id="confirmation" class="confirmation-message"></div>
               </form>
             </fieldset>

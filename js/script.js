@@ -232,7 +232,7 @@ document.getElementById("floatingCart")?.addEventListener("click", () => {
 document.querySelectorAll('.product-card, .product-item').forEach((card, index) =>{
   setTimeout(() => {
     card.classList.add('animate-flyin');
-  }, index * 200);S
+  }, index * 200);
 });
 
 // show button when scrolled
