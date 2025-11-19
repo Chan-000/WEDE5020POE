@@ -86,6 +86,7 @@ August 27, 2025: Pushed the code into Github
 - November 19, 2025: On page SEO --> Added Unique title & meta description on every page,  Keyword-rich content and headings, Descriptive alt text on all images, Proper H1-H3 structure and Mobile-friendly responsive design.
 - November 19, 2025: Added the Off SEO proof which is under part 3 on this page(README.md).
 - November 19, 2025: for Page speed added Preconnect fonts, lazy loading, compressed images, caching headers and for security Added X-Frame-Options, X-XSS-Protection, Referrer-Policy headers.
+- November 19, 2025: Added a toastShow function whih alerts or shows when a product is added in a cart. 
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
  -Pet care tips inspired by general veterinary guidelines
