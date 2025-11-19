@@ -934,22 +934,7 @@ nav ul li a { /*descendant selector*/
 }
 
 
-.modal-btn {
-  margin-top:1rem; 
-  padding:0.8rem 2rem; 
-  background:#4CAF50; 
-  color:white; 
-  border:none; 
-  border-radius:50px; 
-  cursor:pointer;
-}
 
-
-
-
-.modal-content { background: white; padding: 2rem; border-radius: 20px; text-align: center; animation: pop 0.4s; max-width: 90%; }
-.modal-content i { font-size: 4rem; color: #4CAF50; margin-bottom: 1rem; }
-.modal-btn { margin-top: 1rem; padding: 0.8rem 2rem; background: #4CAF50; color: white; border: none; border-radius: 50px; cursor: pointer; }
 @keyframes pop { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
 /* FLY IN ANIMATION — JavaScript will trigger this */
