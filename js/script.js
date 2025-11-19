@@ -81,7 +81,7 @@ window.addToCart = function (btn) {
   else cart.push({name, price, qty: 1});
 
   saveCart();
-  alert(`${name} added to cart!`);
+  showToast();
 };
 
 
@@ -104,9 +104,13 @@ function updateCheckoutSummary() {
   });
 
   const shipping = subtotal > 500 ? 0 : 20;
-  document.querySelector(".oder-summary-card p:nth-of-type(1)")?.insertAdjacentHTML("afterend",
-    `<p><b>Shipping:</b> R${shipping} ${subtotal > 500 ? "(Free)" : ""}</p>`
-  );
+  
+  const subEl = document.getElementById("subtotal");
+  if (subEl) subEl.textContent = `Subtotal: R${subtotal}`;
+  
+  const shipEl = document.getElementById("shipping");
+  if (shipEl) shipEl.textContent = `Shipping: R${shipping}`;
+  
    document.querySelector(".total-price").textContent = `R${subtotal + shipping}`;
 }
 
@@ -219,11 +223,17 @@ function initHamburgerMenu(){
   });
 }
 
-// Open cart modal when floating is clicked
-document.getElementById("floatingCart")?.addEventListener("click", () => {
-  document.getElementById("cartSummaryModal").style.display = "flex";
-  updateCartBadge(); // refresh content
-});
+//------------------------------------------------
+//toast function shows a product is added to cart
+//----------------------------------------------
+function showToast() {
+  const toast = document.getElementById("toast");
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2500); // Hide after 2.5 sec
+}
 
 
 //---------------------------------------
