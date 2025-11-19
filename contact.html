@@ -17,6 +17,8 @@
       <meta name="description" content="Visit our Green Point store or order online. Free delivery over R500.">
       <meta name="keywords" content="pet food, dog treats, cat snacks, natural pet food, Cape Town">
       <meta name="author" content="Whiskers & Wag Tails" />
+      <!--lightbox-->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
       <!--security headers-->
       <meta http-equiv="X-Content-Type-Options" content="nosniff">
       <meta http-equiv="X-Frame-Options" content="DENY">
@@ -68,11 +70,17 @@
           <section class="contact-details-container"> <!--Section for the contact form-->
             <div class="contact-image">
               <!--Use picture element to serve different image based on screen size for responsiveness-->
-              <picture>
-                <source media="(max-width: 767px)" srcset="images/dog_eating_snacks-mobile.jpg">
-                <source media="(min-width: 768px)" srcset="images/dog_eating_snacks-tablet.jpg">
-                <img src="images/dog_eating_snacks.jpg" alt="dog eating snacks">
-              </picture>
+              <a
+                href="images/dog_eating_snacks.jpg"
+                data-lightbox="contact"
+                data-title="dog eating snacks">
+
+                <picture>
+                  <source media="(max-width: 767px)" srcset="images/dog_eating_snacks-mobile.jpg">
+                  <source media="(min-width: 768px)" srcset="images/dog_eating_snacks-tablet.jpg">
+                  <img src="images/dog_eating_snacks.jpg" alt="dog eating snacks">
+                </picture>
+              </a>
             </div>
             <div class="contact-info">
               <h2>Contact Details</h2>
@@ -90,11 +98,11 @@
               <form id="contact-form"> <!--Container for the form elements-->
                 <div class="form-group">
                   <label for="name">Name:</label>
-                  <input type="text" id="name" name="name" placeholder="Enter your name"> <!--Text input for name-->
+                  <input type="text" id="name" name="name" placeholder="Enter your name exp... Chantel"> <!--Text input for name-->
                 </div>
                 <div class="form-group">
                   <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" placeholder="Enter your email"> <!--Email input-->
+                  <input type="email" id="email" name="email" required placeholder="chan@example.com"> <!--Email input-->
                 </div>
                 <div class="form-group">
                   <label for="c_subject">Subject *</label>
@@ -109,7 +117,7 @@
                 </div>
                 <div class="form-group">
                   <label for="message"> Your Message:</label>
-                  <textarea id="message" name="message" placeholder="Enter your message" rows="4"></textarea> <!--Text area for message-->
+                  <textarea id="message" name="message" required placeholder="Type your message" rows="4"></textarea> <!--Text area for message-->
                 </div>
                 <button type="submit" class="submit-button">Send Message via Email</button>
                 <div id="confirmation" class="confirmation-message"></div>
@@ -170,7 +178,8 @@
           <!--leeflet map cdn-->  
           <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
           <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-   
+           
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
           <script>
             //Interactive map
             document.addEventListener("DOMContentLoaded", function(){
