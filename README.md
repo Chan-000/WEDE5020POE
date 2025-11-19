@@ -120,16 +120,19 @@ design for mobile:
 
 - **Social Media Promotion**   
   → Proof: Screenshot of Facebook post 
-  ![Facebook Promotion](images/proof-facebook.jfif)  
+    ![proof-facebook](https://github.com/user-attachments/assets/ce252d66-1906-48c1-8ef4-c29b8703ac87)
+
   → Proof: Screenshot of Instagram profile and post  
-  ![Instagram Promotion](images/proof-instagram.jfif)
+  ![proof-instagram](https://github.com/user-attachments/assets/44a14493-2937-49e0-bd44-5fe7cd0bcb88)
+
 
 - **Local SEO**  
   • Google Business Profile created and fully set up  
   • Store location: 123 Main Road, Green Point, Cape Town  
   • Added opening hours, phone number, photos, and categories (Pet Store, Natural Pet Food)  
   → Proof: Screenshot of Google Business Profile  
-  ![Google Business Profile](images/proof-goggle-business.png) 
+  <img width="669" height="487" alt="proof-goggle-business" src="https://github.com/user-attachments/assets/12fcc22c-527b-4157-9178-f1546db08a40" />
+
 
 
 
