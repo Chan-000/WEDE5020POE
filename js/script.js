@@ -16,21 +16,22 @@ document.addEventListener("DOMContentLoaded", () =>{
 // SEARCH FUNCTION
 //------------------------------
 function initSearch() {
-  const searchInput = document.getElementById("searchInput");
-  const products = document.querySelectorAll(".products-item");
+  document.getElementById("searchInput")?.addEventListener("input", function() {
+  const query = this.value.toLowerCase().trim();
+  const products = document.querySelectorAll(".product-card");
 
-  if (!searchInput || products.length === 0 ) return;
+  products.forEach(product => {
+    const name = product.querySelector("h3")?.textContent.toLowerCase() || "";
+    const category = product.getAttribute("data-category") || "";
 
-  function filterProducts() {
-    const query = searchInput.value.toLowerCase().trim();
-
-    products.forEach(item => {
-      const text = item.textContent.toLowerCase();
-      item.style.display = text.includes(query) ? "" : "none";
-    });
-  }
-
-  searchInput.addEventListener("input", filterProducts);
+    if (name.includes(query) || category.includes(query)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+});
+ 
 }
 
 
@@ -104,7 +105,7 @@ function updateCheckoutSummary() {
   });
 
   const shipping = subtotal > 500 ? 0 : 20;
-  
+
   const subEl = document.getElementById("subtotal");
   if (subEl) subEl.textContent = `Subtotal: R${subtotal}`;
   
