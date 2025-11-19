@@ -911,6 +911,29 @@ nav ul li a { /*descendant selector*/
   font-weight: bold;
 }
 
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #E8F5E9;
+  color: #4CAF50;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .modal-btn {
   margin-top:1rem; 
   padding:0.8rem 2rem; 
@@ -920,6 +943,9 @@ nav ul li a { /*descendant selector*/
   border-radius:50px; 
   cursor:pointer;
 }
+
+
+
 
 .modal-content { background: white; padding: 2rem; border-radius: 20px; text-align: center; animation: pop 0.4s; max-width: 90%; }
 .modal-content i { font-size: 4rem; color: #4CAF50; margin-bottom: 1rem; }
@@ -960,3 +986,4 @@ nav ul li a { /*descendant selector*/
   display: none;
 
 }
+
