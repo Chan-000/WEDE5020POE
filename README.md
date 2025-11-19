@@ -122,7 +122,8 @@ design for mobile:
     ![proof-facebook](https://github.com/user-attachments/assets/ce252d66-1906-48c1-8ef4-c29b8703ac87)
 
   → Proof: Screenshot of Instagram profile and post  
-  ![proof-instagram](https://github.com/user-attachments/assets/3e7a9a9f-7af3-4271-8f36-08ed139c9475)
+  ![proof-instagram](https://github.com/user-attachments/assets/44a14493-2937-49e0-bd44-5fe7cd0bcb88)
+
 
 - **Local SEO**  
   • Google Business Profile created and fully set up  
