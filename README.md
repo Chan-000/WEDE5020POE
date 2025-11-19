@@ -133,8 +133,22 @@ design for mobile:
   → Proof: Screenshot of Google Business Profile  
   <img width="669" height="487" alt="proof-goggle-business" src="https://github.com/user-attachments/assets/12fcc22c-527b-4157-9178-f1546db08a40" />
 
+## HTML Form
+l couldn't add the enquiry form since l already had a checkout form, instead l built a fully working checkout which includes and improves all required enquiry features. So l have implemented two advanced, fully functional forms as required : 
 
+1. Enquiry form --> implemented as checkout.html
+ - Purpose:  Allows users to enquire about products, select delivery options, payment method, and place an order (which is the ultimate form of enquiry).
+- Features: multiple input types, text, tel, textarea, select ,checkbox , full java script validation, dynamic repsonse, professional layout
 
+2. Contact Form --> contact.html
+- Purpose: General message to the busines
+- Features: name, email, message fiels, jAVA script with error messages, sucess confirmation, 
+
+Both forms are:
+- Fully validated with JavaScript
+- User-friendly with clear feedback
+- Responsive and accessible
+- Real-world applicable
 
 
 
