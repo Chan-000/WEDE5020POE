@@ -72,6 +72,20 @@
           <div class="progress-step"><i class="fas fa-credit-card"></i>Payment</div>
         </div>
         <div class="checkout-container">
+          <section class="order-summary-card">  <!--Section for the order summary-->
+            <h3>Order Summary</h3>
+            <div class="summary-content">
+              <p><b>Items:</b></p>
+              <ul id="cartItems">
+                <li>Crunchy Peanut & Pumpkin Bones -160g(R55)</li>
+                <li>Low Fat Chicken Biscuits - 200g (80g)</li>
+                <li>Salmon Cat Treats - 100g (R40)</li>
+              </ul>
+              <p id="subtotal"><b>SubTotal:</b></p>
+              <p id="shipping"><b>Shipping:</b> R20 (standard)</p>
+              <p><b>Total:</b> <span class="total-price">R195</span></p>
+            </div>
+          </section>
           <section class="checkout-form-card">
               <h3>Enter your details</h3>
               <fieldset>
@@ -127,21 +141,7 @@
                 </form>
               </fieldset>
           </section>
-          <section class="order-summary-card">  <!--Section for the order summary-->
-            <h3>Order Summary</h3>
-            <div class="summary-content">
-              <p><b>Items:</b></p>
-              <ul id="cartItems">
-                <li>Crunchy Peanut & Pumpkin Bones -160g(R55)</li>
-                <li>Low Fat Chicken Biscuits - 200g (80g)</li>
-                <li>Salmon Cat Treats - 100g (R40)</li>
-              </ul>
-              <p><b>Subtotal:</b></p>
-              <p><b>Shipping:</b> R20 (standard)</p>
-              <p><b>Total:</b> <span class="total-price">R195</span></p>
-            </div>
-          </section>
-          
+           
         </div>
       </main>
       <footer>  <!--Contains the footer information-->
@@ -149,33 +149,10 @@
       </footer>
 
       <!--floating cart button + modal-->
-        <div id="floatingCart" class="floating-cart">
+        <div id="floatingCart" class="floating-cart" onclick="window.location.href='checkout.html'" style="cursor: pointer;">
             <div class="cartIcon">
                 <i class="fas fa-shopping-cart"></i>
                 <span id="cartBadge" class="floating-badge">0</span>
-            </div>
-        </div>
-
-        <!--success modal (when item added)-->
-        <div id="successModal" class="modal">
-            <div class="modal-content">
-                <i class="fas fa-check-circle"></i>
-                <h2>Added to Cart!</h2>
-                <p id="successProductName"></p>
-                <button onclick="document.getElementById('successModal').style.display='none'" class="modal-btn">Continue Shopping</button>
-            </div>
-        </div>
-
-        <!--Cart summary modal-->
-        <div id="cartSummaryModal" class="modal">
-            <div class="modal-content" style="max-width: 400px; max-height: 80vh; overflow-y: auto;">
-                <h2 style="color: #4CAF50;">Your cart</h2>
-                <div id="cartItemsList">Your cart is empty</div>
-                <p id="cartTotal" style="font-weight: bold; margin: 1rem 0;"></p>
-                <div style="display: flex; gap: 1rem;">
-                    <button onclick="document.getElementById('cartSummaryModal').style.display='none'" style="flex:1; padding:0.8rem; background:#ccc; border:none; border-radius:50px;">Continue</button>
-                    <a href="checkout.html" style="flex:1; padding:0.8rem; background:#4CAF50; color:white; text-align:center; border-radius:50px; text-decoration:none;">Checkout</a>
-                </div>
             </div>
         </div>
 
