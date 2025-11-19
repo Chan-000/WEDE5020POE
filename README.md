@@ -82,6 +82,7 @@ August 27, 2025: Pushed the code into Github
 - November 15, 2025:  Added robots.txt and sitemap.xml to improve search engine indexing.
 - November 18, 2025:  Form validation now shows correct errors for email, phone, and terms. 
 - November 18, 2015: Added  Interactive Leaflet map on contact page with two locations.
+- November 18, 2025: Addded a dynamic floating cart on all html pages.
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
  -Pet care tips inspired by general veterinary guidelines

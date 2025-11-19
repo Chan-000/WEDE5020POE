@@ -65,7 +65,9 @@ function updateCartBadge(){
   const badge = document.getElementById("cartBadge");
   if (badge) {
     badge.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+    
   }
+
 }
 
 window.addToCart = function (btn) {
@@ -216,3 +218,18 @@ function initHamburgerMenu(){
     nav.style.flexDirection = "column";
   });
 }
+
+// Open cart modal when floating is clicked
+document.getElementById("floatingCart")?.addEventListener("click", () => {
+  document.getElementById("cartSummaryModal").style.display = "flex";
+  updateCartBadge(); // refresh content
+});
+
+//---------------------------------------
+// FLY IN ANIMATION FOR PRODUCT CARDS
+//---------------------------------------
+document.querySelectorAll('.product-card, .product-item').forEach((card, index) =>{
+  setTimeout(() => {
+    card.classList.add('animate-flyin');
+  }, index * 200);
+});
