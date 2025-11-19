@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Allow all pages
+Disallow: /thank-you.html
+Disallow: /admin/
+
 Sitemap: https://chan-000.github.io/WEDE5020POE/sitemap.xml
