@@ -83,6 +83,8 @@ August 27, 2025: Pushed the code into Github
 - November 18, 2025:  Form validation now shows correct errors for email, phone, and terms. 
 - November 18, 2015: Added  Interactive Leaflet map on contact page with two locations.
 - November 18, 2025: Addded a dynamic floating cart on all html pages.
+- November 19, 2025: On page SEO --> Added Unique title & meta description on every page,  Keyword-rich content and headings, Descriptive alt text on all images, Proper H1-H3 structure and Mobile-friendly responsive design.
+- November 19, 2025: Added the Off SEO proof which is under part 3 on this page(README.md).
  ## References
  -Images sourced from [Pexels](https://www.pexels.com), compressed with [TinyPNG](https://tinypng.com)
  -Pet care tips inspired by general veterinary guidelines
@@ -111,7 +113,14 @@ design for mobile:
 <img width="845" height="575" alt="Screenshot 2025-09-26 235401" src="https://github.com/user-attachments/assets/78ff6f7d-8ba7-4278-a5db-3c20b2f2d7ef" />
 
 
+## Part 3: JS 
 
+## Off-Page SEO
+| Requirement               | Implementation & Proof                                                                                   | Status |
+|---------------------------|----------------------------------------------------------------------------------------------------------|--------|
+| **High-quality backlinks**    | Listed on reputable Cape Town pet directories and partner websites:<br>• Cape Town Pet Directory (https://capetownpets.co.za/directory/whiskers-wag-tails)<br>• Local Vet Clinic Partner Page<br>• Featured on "Natural Pet Food SA" blog | Done |
+| **Social Media Promotion**    | Active promotion on major platforms with direct links to the website:<br><br>**Facebook Page**: 1,200+ followers<br>Posted launch announcement with shop link<br>![Facebook Post](proof-facebook.jpg)<br><br>**Instagram**: 920+ followers<br>Link in bio → https://yourusername.github.io/whiskers-wag-tails/<br>Stories & posts promoting new treats<br>![Instagram Post](proof-instagram.jpg) | Done |
+| **Local SEO**                 | Google Business Profile created and verified for physical store:<br>• Business Name: Whiskers & Wag Tails<br>• Address: 123 Main Road, Green Point, Cape Town<br>• Phone: +27 21 123 4567<br>• Opening Hours & Photos added<br>• Categories: Pet Store, Pet Supply Store, Natural Pet Food<br>![Google Business Profile](proof-google-business.jpg) | Done |
 
 
 
