@@ -225,6 +225,7 @@ document.getElementById("floatingCart")?.addEventListener("click", () => {
   updateCartBadge(); // refresh content
 });
 
+
 //---------------------------------------
 // FLY IN ANIMATION FOR PRODUCT CARDS
 //---------------------------------------
@@ -239,3 +240,49 @@ window.addEventListener('scroll', () => {
   document.getElementById('scrollTopBtn').style.display =
     window.scrollY > 300 ? 'block' : 'none';
 });
+
+
+//-------------------------------------
+// DYNAMICALLY LOAD FEATURED PRODUCTS
+//-------------------------------------
+// DYNAMICALLY LOAD FEATURED PRODUCTS (THIS IS WHAT THEY WANT!)
+const featuredProducts = [
+  { name: "Crunchy Peanut & Pumpkin Bones", price: 55, img: "images/cat_food.jpg" },
+  { name: "Salmon & Sweet Potato Bites", price: 85, img: "images/dog_food.jpg" },
+  { name: "Chicken & Rice Training Treats", price: 65, img: "images/foood.jpg" },
+  { name: "Beef Liver Snacks", price: 95, img: "images/liver.jpg" }
+];
+
+function loadFeaturedProducts() {
+  const container = document.getElementById("dynamicProducts");
+  if (!container) return;
+
+  container.innerHTML = ""; // clear loading text
+
+  featuredProducts.forEach(product => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.innerHTML = `
+      <img src="${product.img}" alt="${product.name}" onerror="this.src='images/placeholder.jpg'">
+      <h3>${product.name}</h3>
+      <p class="product-price">R${product.price}</p>
+      <button onclick="addToCartFromFeatured('${product.name}', ${product.price})" class="add-to-cart">
+        Add to Cart
+      </button>
+    `;
+    container.appendChild(card);
+  });
+}
+
+// Add this function too
+window.addToCartFromFeatured = function(name, price) {
+  const existing = cart.find(item => item.name === name);
+  if (existing) existing.qty++;
+  else cart.push({ name, price, qty: 1 });
+  saveCart();
+  document.getElementById("successProductName").textContent = name;
+  document.getElementById("successModal").style.display = "flex";
+};
+
+// RUN IT WHEN PAGE LOADS
+document.addEventListener("DOMContentLoaded", loadFeaturedProducts);
