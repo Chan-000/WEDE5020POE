@@ -231,5 +231,11 @@ document.getElementById("floatingCart")?.addEventListener("click", () => {
 document.querySelectorAll('.product-card, .product-item').forEach((card, index) =>{
   setTimeout(() => {
     card.classList.add('animate-flyin');
-  }, index * 200);
+  }, index * 200);S
+});
+
+// show button when scrolled
+window.addEventListener('scroll', () => {
+  document.getElementById('scrollTopBtn').style.display =
+    window.scrollY > 300 ? 'block' : 'none';
 });
